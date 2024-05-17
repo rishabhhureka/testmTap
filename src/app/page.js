@@ -1,113 +1,272 @@
-import Image from "next/image";
+'use client'
+import * as React from 'react';
+import Box from '@mui/joy/Box';
+import FormLabel from '@mui/joy/FormLabel';
+import Radio, { radioClasses } from '@mui/joy/Radio';
+import RadioGroup from '@mui/joy/RadioGroup';
+import Sheet from '@mui/joy/Sheet';
+import Done from '@mui/icons-material/Done';
+import Button from '@mui/joy/Button';
+import Card from '@mui/joy/Card';
+import CardContent from '@mui/joy/CardContent';
+import CardOverflow from '@mui/joy/CardOverflow';
+import Typography from '@mui/joy/Typography';
+import Image from 'next/image';
+import googleReviewButton from "../Img/googleReviewCard.svg"
 
+import { Grid,FormControl,InputLabel,Select,MenuItem,TextField, IconButton} from '@mui/material';
+import AddIcon from '@mui/icons-material/Add';
+import RemoveIcon from '@mui/icons-material/Remove';
+import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
+import Head from 'next/head';
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    const [quantity, setQuantity] = React.useState(1);
+    const [count, setCount] = React.useState(1);
+    const images = [
+        { src: googleReviewButton, alt: 'Image 1' },
+        { src: googleReviewButton, alt: 'Image 2' },
+        { src: googleReviewButton, alt: 'Image 3' },
+        { src: googleReviewButton, alt: 'Image 4' },
+      ];
+      
+    const [selectedImage, setSelectedImage] = React.useState(images[0]);
+    const colors = [
+        { name: 'danger', bgColor: 'danger.solidBg' },
+  { name: 'white', bgColor: 'common.white' },
+  { name: 'black', bgColor: 'common.black' },
+  { name: 'primary', bgColor: 'primary.solidBg' },
+      ];
+     
+  const handleIncrement = () => {
+    setCount(count + 1);
+  };
+
+  const handleDecrement = () => {
+    setCount(count - 1);
+  };
+    // const handleColorChange = (event) => {
+    //   setColor(event.target.value);
+    // };
+  
+    const handleQuantityChange = (event) => {
+      setQuantity(event.target.value);
+    };
+    return(
+        <main>
+        <>
+    <Head>
+    <title>Google Review Cards</title>
+    <meta name="description" content="Elevate your Google Review strategy with the Google Review Cards component. Designed for seamless integration into your Next.js application, this component offers a visually appealing way to showcase customer reviews. Customize card colors, upload your business logo, and choose the card pack size that suits your needs. Engage customers effortlessly with a QR code linked to your Google Review profile. Boost positive feedback and simplify review management with this intuitive solution." />
+    <meta name="keywords" content="product, ecommerce, User engagement, SEO-friendly, Customizable colors, Google Review Cards" />
+  </Head>
+    <Card >
+        <Typography className="googleReviewCardsHeading" sx={{fontSize:'80px', fontWeight:"900",textAlign:'center'}}>Google Review Cards</Typography>
+    <Card
+    className='CardContent'
+      size="lg"
+      variant="plain"
+      orientation="horizontal"
+      sx={{
+        display:'flex',
+        justifyContent:'center',
+        alignItems:'center',
+        textAlign: 'center',
+        maxWidth: '100%',
+        resize: 'horizontal',
+        overflow: 'auto',
+      }}
+    >
+          <Box sx={{ display: 'flex' }}>
+      <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', margin: '1rem' }}>
+        {images.map((image, index) => (
+          <Box
+          className="reviewCardSmallBox"
+            key={index}
+            sx={{
+              width: 80,
+              height: 60,
+              marginBottom: '1rem',
+              cursor: 'pointer',
+              border: '1px solid #ccc',
+              borderRadius: '8px',
+              overflow: 'hidden',
+            }}
+            onClick={() => setSelectedImage(image)}
           >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
+            <Image src={image.src} alt={image.alt} layout="responsive" />
+          </Box>
+        ))}
+      </Box>
+    
+      <CardOverflow
+        variant="solid"
+    className="googleReviewCardImage"
+        sx={{
+     width:'40vw',
+          display: 'flex',
+          background:"white",
+        //   flexDirection: 'column',
+        margin:'5rem',
+          justifyContent: 'center',
+          px: 'var(--Card-padding)',
+        }}
+      >
+      <Box
+        sx={{
+            boxShadow: '0 10px 20px rgba(0, 0, 0, 0.25), 0 15px 30px rgba(0, 0, 0, 0.22)',
+            borderRadius: '38px', // Optional: To make the corners rounded
+            overflow: 'hidden',  // Optional: To clip the image corners if borderRadius is used
+          }}
+      >
+        <Image src={selectedImage.src} alt='reviewbutton'  />
+      </Box>
+      </CardOverflow>
+      </Box>
+      <CardContent sx={{ gap: 1.5, minWidth: 200 }}>
+      
+        <CardContent >
+      
+          <Typography variant="h3"  gutterBottom style={{fontSize:"40px" ,fontWeight:"bold", color:"#00B4D8"}}>
+            $39.00
+          </Typography>
+        
+          <Grid container spacing={2} justifyContent="center">
+          <Grid item xs={12} md={6}>
+          {/* <Box sx={{ resize: 'horizontal', overflow: 'auto', px: 2 }}> */}
+      <FormLabel
+        id="product-color-attribute"
+        sx={{
+          mb: 2.5,
+          fontWeight: 'xl',
+          textTransform: 'uppercase',
+          fontSize: 'm',
+          letterSpacing: '0.1em',
+        }}
+      >
+        Card Color
+      </FormLabel>
+      <RadioGroup
+      aria-labelledby="product-color-attribute"
+      defaultValue="black"
+      sx={{ gap: 2, flexWrap: 'wrap', flexDirection: 'row' }}
+    >
+      {colors.map((color) => (
+        <Sheet
+          key={color.name}
+          sx={{
+            position: 'relative',
+            width: 40,
+            height: 40,
+            flexShrink: 0,
+            bgcolor: color.bgColor,
+            borderRadius: '50%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            border:'2px solid black'
+          }}
         >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
+          <Radio
+            overlay
+            variant="solid"
+            // Do not pass the color prop for custom colors
+            checkedIcon={<Done fontSize="xl2" />}
+            value={color.name}
+            slotProps={{
+              input: { 'aria-label': color.name },
+              radio: {
+                sx: {
+                  display: 'contents',
+                  '--variant-borderWidth': '2px',
+                 
+                },
+              },
+            }}
+            sx={{
+              '--joy-focus-outlineOffset': '4px',
+              '--joy-palette-focusVisible': (theme) => theme.vars.palette[color.name]?.[500] || theme.vars.palette.common[500],
+              [`& .${radioClasses.action}.${radioClasses.focusVisible}`]: {
+                outlineWidth: '2px',
+              },
+              // Custom styles for white and black colors
+              ...(color.name === 'white' && {
+                color: 'common.white',
+                '&.Mui-checked': {
+                  color: 'common.white',
+                },
+              }),
+              ...(color.name === 'black' && {
+                color: 'common.black',
+                '&.Mui-checked': {
+                  color: 'common.black',
+                },
+              }),
+            }}
+          />
+        </Sheet>
+      ))}
+    </RadioGroup>
+      <br />
+   
+    {/* </Box> */}
+            <TextField fullWidth label="Name of your Business" variant="outlined" margin="normal"  />
+            <TextField fullWidth label="Address of your Business" variant="outlined" margin="normal" />
+            <FormControl fullWidth variant="outlined" margin="normal">
+              <InputLabel>Select Card Pack</InputLabel>
+              <Select value={quantity} onChange={handleQuantityChange} label="Select Card Pack">
+                <MenuItem value={1}>Single Pack</MenuItem>
+                <MenuItem value={5}>5-Pack</MenuItem>
+                <MenuItem value={10}>10-Pack</MenuItem>
+              </Select>
+            </FormControl>
+            <Box my={2}>
+              <Button variant="outlined" component="label" fullWidth sx={{border:'1px solid grey' ,color:'grey'}}>
+              <AddPhotoAlternateIcon sx={{ margin:'12px'}} />
+                Upload Business Logo
+                <input type="file" hidden />
+              </Button>
+                </Box>
+                <Box display="flex" alignItems="center" border={1} borderRadius={10} padding={1} sx={{width:'fit-content',marginTop:'2rem',marginBottom:'2rem'}}>
+      <IconButton onClick={handleDecrement} aria-label="decrement">
+        <RemoveIcon />
+      </IconButton>
+      <Typography variant="h6" mx={4} sx={{fontSize:'20px',fontWeight:"bold"}}>
+        {count}
+      </Typography>
+      <IconButton onClick={handleIncrement} aria-label="increment">
+        <AddIcon />
+      </IconButton>
+    </Box>
+          </Grid>
+        </Grid>
+        </CardContent>
+        <Button
+        className='AddToCartButton'
+         
+          sx={{
+            '--variant-borderWidth': '2px',
+            borderRadius: 10,
+        width:'25vw',
+        padding:'1rem',
+            mx: 'auto',
+             backgroundColor:"#00B4D8"
+          }}
+     
         >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+         ADD TO CART
+        </Button>
+      </CardContent>
+      </Card>
+      <Box sx={{display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginTop: '2rem'}}>
+       <Typography sx={{fontSize:'70px',fontWeight:'bold'}}>Description</Typography>
+       <Typography sx={{fontSize:'30px',width:'60vw',marginBottom:'5rem'}} className="DescriptionP">Want more reviews from happy customers? Just have them tap or scan the QR code and take them directly to your Google Review Profile. Get more positive feedback instantly. You do not have to do anything . We will configure the card for you with the Google Review link of your business. No Profile creation or any account management</Typography>
+       </Box>
+       </Card>
+       </>
+        </main>
+    )
 }
