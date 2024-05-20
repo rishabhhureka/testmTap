@@ -12,18 +12,25 @@ import CardContent from '@mui/joy/CardContent';
 import CardOverflow from '@mui/joy/CardOverflow';
 import Typography from '@mui/joy/Typography';
 import Image from 'next/image';
-import googleReviewButton from "../Img/googleReviewCard.webp"
-
+import googleReviewButton from "../Img/googleReviewCard.png"
+import googleReviewButton2 from "../Img/googleCustomCard.png"
+import qrCode from "../Img/qrCode.png"
 import { Grid,FormControl,InputLabel,Select,MenuItem,TextField, IconButton} from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
 import Head from 'next/head';
+const images = [
+  { src: googleReviewButton, alt: 'Image 1' },
+  { src: qrCode, alt: 'Image 2' },
+  { src: googleReviewButton2, alt: 'Image 3' },
 
+];
 const Product = () => {
     const [quantity, setQuantity] = React.useState(1);
     const [count, setCount] = React.useState(1);
-  
+      
+    const [selectedImage, setSelectedImage] = React.useState(images[0]);
 
     const colors = [
         { name: 'danger', bgColor: 'danger.solidBg' },
@@ -75,7 +82,26 @@ const Product = () => {
       }}
     >
           <Box sx={{ display: 'flex' }}>
-   
+          <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', margin: '1rem' }}>
+        {images.map((image, index) => (
+          <Box
+          className="reviewCardSmallBox"
+            key={index}
+            sx={{
+              width: 100,
+              height: 80,
+              marginBottom: '1rem',
+              cursor: 'pointer',
+              border: `2px solid ${selectedImage === image ? 'black' : '#ccc'}`, // Conditional border
+              borderRadius: '8px',
+              overflow: 'hidden',
+            }}
+            onClick={() => setSelectedImage(image)}
+          >
+            <Image src={image.src} alt={image.alt}  loading="lazy" />
+          </Box>
+        ))}
+      </Box>
       <CardOverflow
         variant="solid"
     
@@ -93,16 +119,17 @@ const Product = () => {
           }
         }}
       >
-      <Box
+      {/* <Box
         sx={{
             boxShadow: '0 10px 20px rgba(0, 0, 0, 0.25), 0 15px 30px rgba(0, 0, 0, 0.22)',
+            border: '1px solid transparent',
             borderRadius: '38px', 
             overflow: 'hidden',  
           }}
-      >
-        {/* <Image src={selectedImage.src} alt='reviewbutton'  priority/> */}
-        <Image src={googleReviewButton} alt='reviewbutton'  priority/>
-      </Box>
+      > */}
+        <Image src={selectedImage.src} alt='reviewbutton'  loading="eager" width={700} height={400} />
+        {/* <Image src={googleReviewButton} alt='reviewbutton'   loading="eager"  /> */}
+      {/* </Box> */}
       </CardOverflow>
       </Box>
       <CardContent sx={{ gap: 1.5, minWidth: 200 }}>

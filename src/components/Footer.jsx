@@ -9,43 +9,43 @@ import tiktokIcon from "../Img/tiktok.png"
 const Footer = () => (
   <footer>
   <div className="row">
-      {/* Company Section */}
-      <div className="column">
-          <h3>Company</h3>
-          <ul>
-          {["Shop", "Where To Tap", "Compatibility", "Events", "Blog", "Affiliate Program", "Become a Retail Partner", "Knowledge Base", "Gallery"].map((item) => (
+  <div className="column">
+        <h3>Company</h3>
+        <ul>
+          {["About Us", "Careers", "Press", "Blog"].map((item) => (
             <li key={item}>{item}</li>
           ))}
         </ul>
       </div>
-      {/* Products Section (similar structure as Company) */}
+      {/* Products Section */}
       <div className="column">
-          <h3>Products</h3>
-          <ul>
-          {["Shop", "Where To Tap", "Compatibility", "Events", "Blog", "Affiliate Program", "Become a Retail Partner", "Knowledge Base", "Gallery"].map((item) => (
+        <h3>Products</h3>
+        <ul>
+          {["Shop", "Pricing", "Features", "Integrations"].map((item) => (
             <li key={item}>{item}</li>
           ))}
         </ul>
       </div>
-      {/* Trust & Legal Section (similar structure as Company) */}
+      {/* Trust & Legal Section */}
       <div className="column">
-          <h3>Trust &amp; Legal</h3>
-          <ul>
-          {["Shop", "Where To Tap", "Compatibility", "Events", "Blog", "Affiliate Program", "Become a Retail Partner", "Knowledge Base", "Gallery"].map((item) => (
+        <h3>Trust & Legal</h3>
+        <ul>
+          {["Privacy Policy", "Terms of Service", "Compliance", "Security"].map((item) => (
             <li key={item}>{item}</li>
           ))}
         </ul>
       </div>
-      {/* Support Section (similar structure as Company) */}
+      {/* Support Section */}
       <div className="column">
-          <h3>Support</h3>
-          <ul>
-          {["Shop", "Where To Tap", "Compatibility", "Events", "Blog", "Affiliate Program", "Become a Retail Partner", "Knowledge Base", "Gallery"].map((item) => (
+        <h3>Support</h3>
+        <ul>
+          {["Help Center", "Contact Us", "FAQs", "System Status"].map((item) => (
             <li key={item}>{item}</li>
           ))}
         </ul>
       </div>
-  </div>
+    </div>
+  {/* </div> */}
   {/* Social Media Icons Section */}
   <div className="row">
       <div className="column social">
