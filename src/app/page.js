@@ -12,7 +12,7 @@ import CardContent from '@mui/joy/CardContent';
 import CardOverflow from '@mui/joy/CardOverflow';
 import Typography from '@mui/joy/Typography';
 import Image from 'next/image';
-import googleReviewButton from "../Img/googleReviewCard.svg"
+import googleReviewButton from "../Img/googleReviewCard.webp"
 import { Grid,FormControl,InputLabel,Select,MenuItem,TextField, IconButton} from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
@@ -63,7 +63,7 @@ export default function Home() {
         <Typography variant="h1" gutterBottom className="googleReviewCardsHeading" sx={{fontSize:'80px', fontWeight:"900",textAlign:'center'}}>Google Review Cards</Typography>
         
     <Card
-    className='CardContent'
+    // className='CardContent'
       size="lg"
       variant="plain"
       orientation="horizontal"
@@ -76,6 +76,9 @@ export default function Home() {
         resize: 'horizontal',
         overflow: 'auto',
         contain: 'content',
+        '@media screen and (max-width: 768px)': {
+         flexDirection:'column'
+        }
       }}
     >
           <Box sx={{ display: 'flex' }}>
@@ -102,15 +105,19 @@ export default function Home() {
     
       <CardOverflow
         variant="solid"
-    className="googleReviewCardImage"
+    // className="googleReviewCardImage"
         sx={{
      width:'40vw',
           display: 'flex',
           background:"white",
-        //   flexDirection: 'column',
+        
         margin:'5rem',
           justifyContent: 'center',
           px: 'var(--Card-padding)',
+          '@media screen and (max-width: 768px)': {
+            width: '100%',
+            margin: 0,
+          }
         }}
       >
       <Box
