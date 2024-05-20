@@ -12,8 +12,8 @@ import CardContent from '@mui/joy/CardContent';
 import CardOverflow from '@mui/joy/CardOverflow';
 import Typography from '@mui/joy/Typography';
 import Image from 'next/image';
-import googleReviewButton from "../Img/googleReviewCard.png"
-import googleReviewButton2 from "../Img/googleCustomCard.png"
+import googleReviewButton from "../Img/GoogleReviewCard.png"
+import googleReviewButton2 from "../Img/GoogleCustomCard.png"
 import qrCode from "../Img/qrCode.png"
 import { Grid,FormControl,InputLabel,Select,MenuItem,TextField, IconButton} from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
@@ -98,7 +98,7 @@ const Product = () => {
             }}
             onClick={() => setSelectedImage(image)}
           >
-            <Image src={image.src} alt={image.alt}  loading="lazy" />
+            <Image src={image.src} alt={image.alt}  loading="eager" priority />
           </Box>
         ))}
       </Box>
@@ -127,7 +127,7 @@ const Product = () => {
             overflow: 'hidden',  
           }}
       > */}
-        <Image src={selectedImage.src} alt='reviewbutton'  loading="eager" width={700} height={400} />
+        <Image src={selectedImage.src} alt='reviewbutton'  loading="eager" width={700} height={400} priority />
         {/* <Image src={googleReviewButton} alt='reviewbutton'   loading="eager"  /> */}
       {/* </Box> */}
       </CardOverflow>

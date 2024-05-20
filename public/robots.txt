@@ -1,4 +1,9 @@
+# *
 User-agent: *
 Allow: /
 
+# Host
+Host: https://mtap.byklabs.store
+
+# Sitemaps
 Sitemap: https://mtap.byklabs.store/sitemap.xml
