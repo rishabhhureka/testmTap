@@ -92,7 +92,7 @@ export default function Product() {
             }}
             onClick={() => setSelectedImage(image)}
           >
-            <Image src={image.src} alt={image.alt} layout="responsive" />
+            <Image src={image.src} alt={image.alt} layout="responsive" priority />
           </Box>
         ))}
       </Box>

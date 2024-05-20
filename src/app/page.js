@@ -13,21 +13,21 @@ import CardOverflow from '@mui/joy/CardOverflow';
 import Typography from '@mui/joy/Typography';
 import Image from 'next/image';
 import googleReviewButton from "../Img/googleReviewCard.svg"
-
 import { Grid,FormControl,InputLabel,Select,MenuItem,TextField, IconButton} from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
 import Head from 'next/head';
+const images = [
+  { src: googleReviewButton, alt: 'Image 1' },
+  { src: googleReviewButton, alt: 'Image 2' },
+  { src: googleReviewButton, alt: 'Image 3' },
+  { src: googleReviewButton, alt: 'Image 4' },
+];
 export default function Home() {
     const [quantity, setQuantity] = React.useState(1);
     const [count, setCount] = React.useState(1);
-    const images = [
-        { src: googleReviewButton, alt: 'Image 1' },
-        { src: googleReviewButton, alt: 'Image 2' },
-        { src: googleReviewButton, alt: 'Image 3' },
-        { src: googleReviewButton, alt: 'Image 4' },
-      ];
+  
       
     const [selectedImage, setSelectedImage] = React.useState(images[0]);
     const colors = [
@@ -56,11 +56,12 @@ export default function Home() {
         <>
     <Head>
     <title>Google Review Cards</title>
-    <meta name="description" content="Elevate your Google Review strategy with the Google Review Cards component. Designed for seamless integration into your Next.js application, this component offers a visually appealing way to showcase customer reviews. Customize card colors, upload your business logo, and choose the card pack size that suits your needs. Engage customers effortlessly with a QR code linked to your Google Review profile. Boost positive feedback and simplify review management with this intuitive solution." />
+    <meta name="description" content="Elevate your Google Review strategy with the Google Review Cards component. Customize card colors, upload your business logo, and choose the card pack size that suits your needs." />
     <meta name="keywords" content="product, ecommerce, User engagement, SEO-friendly, Customizable colors, Google Review Cards" />
   </Head>
     <Card >
-        <Typography className="googleReviewCardsHeading" sx={{fontSize:'80px', fontWeight:"900",textAlign:'center'}}>Google Review Cards</Typography>
+        <Typography variant="h1" gutterBottom className="googleReviewCardsHeading" sx={{fontSize:'80px', fontWeight:"900",textAlign:'center'}}>Google Review Cards</Typography>
+        
     <Card
     className='CardContent'
       size="lg"
@@ -74,6 +75,7 @@ export default function Home() {
         maxWidth: '100%',
         resize: 'horizontal',
         overflow: 'auto',
+        contain: 'content',
       }}
     >
           <Box sx={{ display: 'flex' }}>
@@ -93,7 +95,7 @@ export default function Home() {
             }}
             onClick={() => setSelectedImage(image)}
           >
-            <Image src={image.src} alt={image.alt} layout="responsive" />
+            <Image src={image.src} alt={image.alt} layout="responsive" loading="lazy" />
           </Box>
         ))}
       </Box>
@@ -118,7 +120,8 @@ export default function Home() {
             overflow: 'hidden',  // Optional: To clip the image corners if borderRadius is used
           }}
       >
-        <Image src={selectedImage.src} alt='reviewbutton'  />
+        {/* <Image src={selectedImage.src} alt='reviewbutton'  priority/> */}
+        <Image src={googleReviewButton} alt='reviewbutton'  priority/>
       </Box>
       </CardOverflow>
       </Box>
@@ -262,7 +265,7 @@ export default function Home() {
         justifyContent: 'center',
         alignItems: 'center',
         marginTop: '2rem'}}>
-       <Typography sx={{fontSize:'70px',fontWeight:'bold'}}>Description</Typography>
+       <Typography variant="h2" gutterBottom sx={{fontSize:'70px',fontWeight:'bold'}}>Description</Typography>
        <Typography sx={{fontSize:'30px',width:'60vw',marginBottom:'5rem'}} className="DescriptionP">Want more reviews from happy customers? Just have them tap or scan the QR code and take them directly to your Google Review Profile. Get more positive feedback instantly. You do not have to do anything . We will configure the card for you with the Google Review link of your business. No Profile creation or any account management</Typography>
        </Box>
        </Card>
