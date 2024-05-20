@@ -20,6 +20,23 @@ export default function RootLayout({ children }) {
         <link rel="canonical" href="https://mtap.byklabs.store/" />
         <link rel="icon"  href="/mtaplogoWeb.png" loading="lazy" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: `{
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "mTap",
+              "url": "https://mtap.byklabs.store/",
+              "logo": "https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2022-04/mTapSocialImage.png",
+              "sameAs": [
+                "https://www.facebook.com/mTap.Magic.Marketing",
+                "https://www.instagram.com/mtappro/",
+                "https://www.tiktok.com/@mtapsocial"
+              ]
+            }`,
+          }}
+        />
       </head>
       <body className={inter.className}>
         <Header />

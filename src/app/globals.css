@@ -2636,7 +2636,7 @@ footer .copy {
       width: 85%;
     }
     .googleReviewCardsHeading{
-      font-size: 45px;
+      font-size: 45px !important;
     }
     .reviewCardSmallBox{
       display: none;
