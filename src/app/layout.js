@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: `{
+            __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "mTap",
@@ -33,8 +33,13 @@ export default function RootLayout({ children }) {
                 "https://www.facebook.com/mTap.Magic.Marketing",
                 "https://www.instagram.com/mtappro/",
                 "https://www.tiktok.com/@mtapsocial"
-              ]
-            }`,
+              ],
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+1-800-555-5555",
+                "contactType": "Customer Service"
+              }
+            })
           }}
         />
       </head>
