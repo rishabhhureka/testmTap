@@ -1,12 +1,12 @@
 "use client"; // This is required at the top of the file for Client Components
 
 import { useSearchParams } from "next/navigation";
-
+import { useEffect } from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
+import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Avatar from "@mui/material/Avatar";
@@ -15,6 +15,10 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import XIcon from '@mui/icons-material/X';
 import YouTubeIcon from '@mui/icons-material/YouTube';
+import Link from "next/link";
+import Head from "next/head";
+import { Button } from "@mui/material";
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 const getBackgroundColor = (subheading) => {
   switch (subheading) {
     case "PRODUCTS UPDATES":
@@ -74,6 +78,7 @@ const blogDetailData = {
       text: "Feedback collected through self-reported methods can be subject to response bias, impacting the reliability and accuracy of the insights gathered. Overcoming these biases and obtaining genuine feedback is crucial for making informed decisions.",
     },
   ],
+  
   sources: [
     {
       name: "BrightLocal",
@@ -93,6 +98,57 @@ const blogDetailData = {
     },
   ],
 };
+const blogData = [
+  {
+    id: "1",
+    image:
+      "https://st3.depositphotos.com/3591429/13269/i/450/depositphotos_132694218-stock-photo-woman-writing-notes-in-diary.jpg",
+    subheading: "PRODUCTS UPDATES",
+    heading: "Unleashing the Power of Google Reviews: The mTap NFC Solution",
+    avatar:
+      "https://alumni.cusat.ac.in/wp-content/themes/cera/assets/images/avatars/user-avatar.png",
+    author: "Roopak Gupta",
+    authorTitle: "CEO & Founder @mTap",
+  },
+  {
+    id: "2",
+    image:
+      "https://st3.depositphotos.com/3591429/13269/i/450/depositphotos_132694218-stock-photo-woman-writing-notes-in-diary.jpg",
+    subheading: "NETWORKING TIPS",
+    heading: "Exploring the Future of NFC Technology",
+    avatar:
+      "https://alumni.cusat.ac.in/wp-content/themes/cera/assets/images/avatars/user-avatar.png",
+    author: "Jane Doe",
+    authorTitle: "CTO @TechWorld",
+  },
+  {
+    id: "3",
+    image:
+      "https://st3.depositphotos.com/3591429/13269/i/450/depositphotos_132694218-stock-photo-woman-writing-notes-in-diary.jpg",
+    subheading: "PRODUCTS UPDATES",
+    heading: "The Rise of Contactless Payments",
+    avatar:
+      "https://alumni.cusat.ac.in/wp-content/themes/cera/assets/images/avatars/user-avatar.png",
+    author: "John Smith",
+    authorTitle: "Lead Developer @FinTech",
+  },
+  {
+    id: "4",
+    image:
+      "https://st3.depositphotos.com/3591429/13269/i/450/depositphotos_132694218-stock-photo-woman-writing-notes-in-diary.jpg",
+    subheading: "NEWS & EVENTS",
+    heading: "The Rise of Contactless Payments",
+    avatar:
+      "https://alumni.cusat.ac.in/wp-content/themes/cera/assets/images/avatars/user-avatar.png",
+    author: "John Smith",
+    authorTitle: "Lead Developer @FinTech",
+  },
+];
+
+function handleClick(event) {
+  event.preventDefault();
+  console.info('You clicked a breadcrumb.');
+}
 
 const BlogDetails = () => {
   const searchParams = useSearchParams();
@@ -102,7 +158,106 @@ const BlogDetails = () => {
   const author = searchParams.get("author");
   const authorTitle = searchParams.get("authorTitle");
   const avatar = searchParams.get("avatar");
+  const blogId = searchParams.get("id");
+
+  const generateArticleSchema = () => {
+    
+    return {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": `https://mtap.byklabs.store/blog/${heading}` // Update with your actual blog post URL
+      },
+      "headline": heading, // Use the blog heading here
+      "image": image, // Use the blog image URL here
+      "author": {
+        "@type": "Person",
+        "name": author // Use the blog author name here
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "mTap", // Use your website name here
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2022-04/mTapSocialImage.png" // Use your logo URL here
+        }
+      },
+      "datePublished": "2024-05-17", // Update with your actual publication date
+      "dateModified": "2024-05-17" // Update with your actual modification date
+    };
+  };
+  const generateBreadcrumbSchema = () => {
+    return {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://mtap.byklabs.store"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://mtap.byklabs.store/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": heading,
+          "item": `https://mtap.byklabs.store/blog/${heading}`
+        }
+      ]
+    };
+  };
+  useEffect(() => {
+    // Call generateArticleSchema with the dynamic blog id
+    const articleSchema = generateArticleSchema();
+const articleScript = document.createElement("script");
+    articleScript.type = "application/ld+json";
+    articleScript.innerHTML = JSON.stringify(articleSchema);
+    document.head.appendChild(articleScript);
+    // Clean up the script when component unmounts
+    const breadcrumbSchema = generateBreadcrumbSchema();
+const breadcrumbScript = document.createElement("script");
+breadcrumbScript.type = "application/ld+json";
+breadcrumbScript.innerHTML = JSON.stringify(breadcrumbSchema);
+document.head.appendChild(breadcrumbScript);
+    return () => {
+      document.head.removeChild(articleScript);
+      document.head.removeChild(breadcrumbScript);
+    };
+  }, [blogId]);
   return (
+    <>
+      <Head>
+      <title>Blog Details</title>
+        {/* Include Article Schema within the Head */}
+        <script type="application/ld+json">
+          {JSON.stringify(generateArticleSchema())}
+        </script>
+        <script type="application/ld+json">
+  {JSON.stringify(generateBreadcrumbSchema())}
+</script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "mTap",
+            "url": "https://mtap.byklabs.store/",
+            "logo": "https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2022-04/mTapSocialImage.png",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+1-800-555-5555",
+              "contactType": "Customer Service"
+            }
+          })}
+        </script>
+      </Head>
+      
     <div
       style={{
         marginTop: "12rem",
@@ -111,7 +266,43 @@ const BlogDetails = () => {
         flexDirection: "column",
       }}
     >
+      
       <div style={{ width: "80%", margin: "0 auto" }}>
+        {/* Breadcrumbs */}
+      <div role="presentation" onClick={handleClick} style={{marginBottom:'4rem'}}>
+      <Breadcrumbs aria-label="breadcrumb" separator={<NavigateNextIcon fontSize="medium" sx={{color:"white"}}/>} sx={{display:'inline-block', color:'black',border:'1px solid transparent'}}>
+        <Link underline="hover" color="inherit" href="/"  className="linkBlog">
+        <Typography variant="contained" sx={{color:'white',fontSize:'30px',':hover': {
+            backgroundColor: 'gray', // Change background color on hover
+            color: 'white', // Change text color on hover
+          }}}> Home</Typography>
+         
+        </Link>
+        <Link
+          underline="hover"
+          color="inherit"
+          href="/blog"
+          className="linkBlog"
+        >
+         <Typography variant="contained" sx={{color:'white',fontSize:'30px',':hover': {
+            backgroundColor: 'gray', // Change background color on hover
+            color: 'white', // Change text color on hover
+          }}}> Blog</Typography>
+        </Link>
+        <Typography
+          underline="hover"
+          color="white"
+       
+          aria-current="blogDetails"
+        >
+           <Typography variant="contained" sx={{color:'white',fontSize:'30px',':hover': {
+            backgroundColor: 'gray', // Change background color on hover
+            color: 'white', // Change text color on hover
+          }}} >   {heading}</Typography>
+        
+        </Typography>
+      </Breadcrumbs>
+    </div>
         <Card
           variant="plain"
           sx={{
@@ -320,7 +511,124 @@ const BlogDetails = () => {
           </Box>
         </Card>
       </div>
+
+
+      {/* Continue reading card  */}
+      <div>
+        <h1
+          className="googleReviewCardsHeading"
+          style={{
+            fontSize: "80px",
+            fontWeight: "900",
+            textAlign: "center",
+            marginBottom: "4rem",
+          }}
+        >
+          Continue Reading
+        </h1>
+      </div>
+      <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(2, minmax(350px, 1fr))",
+            gap: "2rem",
+            justifyContent: "center",
+            width: "80%",
+            margin: "0 auto",
+          }}
+        >
+        
+          {blogData.map((blog, index) => (
+            <Card
+              key={index}
+              variant="plain"
+              sx={{
+                height: "70vh",
+                width: "100%",
+                overflow: "auto",
+                marginBottom: "2rem",
+                borderRadius: 20,
+              }}
+            >
+              <CardMedia
+                component="img"
+                alt="blog"
+                image={blog.image}
+                sx={{ maxHeight: 350 }}
+              />
+              <Box sx={{ display: "flex", flexDirection: "column" }}>
+                <CardContent sx={{ flex: "1 0 auto" }}>
+                  <Box
+                    sx={{ display: "flex", justifyContent: "space-between" }}
+                  >
+                    <Typography
+                      variant="h6"
+                      sx={{
+                        display: "inline-block",
+                        backgroundColor: getBackgroundColor(blog.subheading),
+                        color:
+                          blog.subheading === "NEWS & EVENTS"
+                            ? "black"
+                            : "white",
+                        fontWeight: "600",
+                        border: "8px solid transparent",
+                      }}
+                    >
+                      {blog.subheading}
+                    </Typography>
+                    <Typography variant="h6" color="text.secondary">
+                      26 january 2023
+                    </Typography>
+                  </Box>
+
+                  <Link
+                    key={index}
+                    className="linkBlog"
+                    href={{
+                      pathname: "/blogDetails",
+                      query: {
+                        heading: blog.heading,
+                        subheading: blog.subheading,
+                        image: blog.image,
+                        author: blog.author,
+                        authorTitle: blog.authorTitle,
+                        avatar:blog.avatar
+                        // Add any other data you want to pass
+                      },
+                    }}
+                    passHref
+                  >
+                    <Typography
+                      variant="h4"
+                      color="text.secondary"
+                      component="div"
+                      sx={{
+                        color: "black",
+                        marginTop: "2rem",
+                        fontWeight: "600",
+                      }}
+                    >
+                      {blog.heading}
+                    </Typography>
+                  </Link>
+                </CardContent>
+              </Box>
+              <CardActions sx={{ marginLeft: "2rem", gap: "1rem" }}>
+                <Avatar
+                  alt={blog.author}
+                  src={blog.avatar}
+                  sx={{ width: 70, height: 70 }}
+                />
+                <Typography variant="subtitle3" color="text.secondary">
+                  By: {blog.author} <br />
+                  {blog.authorTitle}
+                </Typography>
+              </CardActions>
+            </Card>
+          ))}
+        </div>
     </div>
+    </>
   );
 };
 

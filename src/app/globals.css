@@ -2452,7 +2452,9 @@ footer .copy {
         flex-basis: 100%;
         margin: 0 0 30px
     }
-
+.cardBlog{
+    grid-template-columns: "1fr", 
+}
     .card-wrap h2,
     footer h3 {
         margin-bottom: 20px;
