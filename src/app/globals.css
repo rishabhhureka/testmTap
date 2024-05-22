@@ -2687,7 +2687,9 @@ footer .copy {
     position: fixed;
     top: 1em
 }
-
+.linkBlog{
+    text-decoration: none;
+}
 #debug:after {
     color: #fff;
     content: " Show Debug";

@@ -1,11 +1,12 @@
 import Product from "../components/Product";
 import Head from 'next/head';
+
 export default function Home() {
 
     return(
         <>
         <Head>
-          <title>Your Website Title</title>
+          <title>mTap</title>
           <script type="application/ld+json">
             {JSON.stringify({
               "@context": "https://schema.org",

@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "./globals.css"
 import Header from '../components/Header';
 // import Footer from '../components/Footer';
 
@@ -46,9 +46,9 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Header />
         {children}
-        <Suspense fallback={<div>Loading...</div>}>
+        {/* <Suspense fallback={<div>Loading...</div>}>
         <Footer />
-      </Suspense>
+      </Suspense> */}
       </body>
     </html>
   );

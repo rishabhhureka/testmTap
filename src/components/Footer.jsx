@@ -8,6 +8,7 @@ import instagramIcon from "../Img/instagram.png"
 import tiktokIcon from "../Img/tiktok.png"
 import mtapLogo from "../Img/mtapLogo.png"
 import appStore from "../Img/appStore.png"
+
 const Footer = () => (
   <footer>
   <div className="row">
