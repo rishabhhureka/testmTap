@@ -6,19 +6,18 @@ import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import Breadcrumbs from '@mui/material/Breadcrumbs';
+import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Avatar from "@mui/material/Avatar";
-import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import XIcon from '@mui/icons-material/X';
-import YouTubeIcon from '@mui/icons-material/YouTube';
+import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import XIcon from "@mui/icons-material/X";
+import YouTubeIcon from "@mui/icons-material/YouTube";
 import Link from "next/link";
 import Head from "next/head";
-import { Button } from "@mui/material";
-import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 const getBackgroundColor = (subheading) => {
   switch (subheading) {
     case "PRODUCTS UPDATES":
@@ -78,7 +77,7 @@ const blogDetailData = {
       text: "Feedback collected through self-reported methods can be subject to response bias, impacting the reliability and accuracy of the insights gathered. Overcoming these biases and obtaining genuine feedback is crucial for making informed decisions.",
     },
   ],
-  
+
   sources: [
     {
       name: "BrightLocal",
@@ -147,7 +146,7 @@ const blogData = [
 
 function handleClick(event) {
   event.preventDefault();
-  console.info('You clicked a breadcrumb.');
+  console.info("You clicked a breadcrumb.");
 }
 
 const BlogDetails = () => {
@@ -161,71 +160,69 @@ const BlogDetails = () => {
   const blogId = searchParams.get("id");
 
   const generateArticleSchema = () => {
-    
     return {
       "@context": "https://schema.org",
       "@type": "BlogPosting",
-      "mainEntityOfPage": {
+      mainEntityOfPage: {
         "@type": "WebPage",
-        "@id": `https://mtap.byklabs.store/blog/${heading}` // Update with your actual blog post URL
+        "@id": `https://mtap.byklabs.store/blog/${heading}`, // Update with your actual blog post URL
       },
-      "headline": heading, // Use the blog heading here
-      "image": image, // Use the blog image URL here
-      "author": {
+      headline: heading, // Use the blog heading here
+      image: image, // Use the blog image URL here
+      author: {
         "@type": "Person",
-        "name": author // Use the blog author name here
+        name: author, // Use the blog author name here
       },
-      "publisher": {
+      publisher: {
         "@type": "Organization",
-        "name": "mTap", // Use your website name here
-        "logo": {
+        name: "mTap", // Use your website name here
+        logo: {
           "@type": "ImageObject",
-          "url": "https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2022-04/mTapSocialImage.png" // Use your logo URL here
-        }
+          url: "https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2022-04/mTapSocialImage.png", // Use your logo URL here
+        },
       },
-      "datePublished": "2024-05-17", // Update with your actual publication date
-      "dateModified": "2024-05-17" // Update with your actual modification date
+      datePublished: "2024-05-17", // Update with your actual publication date
+      dateModified: "2024-05-17", // Update with your actual modification date
     };
   };
   const generateBreadcrumbSchema = () => {
     return {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
-      "itemListElement": [
+      itemListElement: [
         {
           "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://mtap.byklabs.store"
+          position: 1,
+          name: "Home",
+          item: "https://mtap.byklabs.store",
         },
         {
           "@type": "ListItem",
-          "position": 2,
-          "name": "Blog",
-          "item": "https://mtap.byklabs.store/blog"
+          position: 2,
+          name: "Blog",
+          item: "https://mtap.byklabs.store/blog",
         },
         {
           "@type": "ListItem",
-          "position": 3,
-          "name": heading,
-          "item": `https://mtap.byklabs.store/blog/${heading}`
-        }
-      ]
+          position: 3,
+          name: heading,
+          item: `https://mtap.byklabs.store/blog/${heading}`,
+        },
+      ],
     };
   };
   useEffect(() => {
-    // Call generateArticleSchema with the dynamic blog id
     const articleSchema = generateArticleSchema();
-const articleScript = document.createElement("script");
+    const articleScript = document.createElement("script");
     articleScript.type = "application/ld+json";
     articleScript.innerHTML = JSON.stringify(articleSchema);
     document.head.appendChild(articleScript);
     // Clean up the script when component unmounts
     const breadcrumbSchema = generateBreadcrumbSchema();
-const breadcrumbScript = document.createElement("script");
-breadcrumbScript.type = "application/ld+json";
-breadcrumbScript.innerHTML = JSON.stringify(breadcrumbSchema);
-document.head.appendChild(breadcrumbScript);
+    const breadcrumbScript = document.createElement("script");
+    breadcrumbScript.type = "application/ld+json";
+    breadcrumbScript.innerHTML = JSON.stringify(breadcrumbSchema);
+    document.head.appendChild(breadcrumbScript);
     return () => {
       document.head.removeChild(articleScript);
       document.head.removeChild(breadcrumbScript);
@@ -234,310 +231,503 @@ document.head.appendChild(breadcrumbScript);
   return (
     <>
       <Head>
-      <title>Blog Details</title>
+        <title>Blog Details</title>
         {/* Include Article Schema within the Head */}
         <script type="application/ld+json">
           {JSON.stringify(generateArticleSchema())}
         </script>
         <script type="application/ld+json">
-  {JSON.stringify(generateBreadcrumbSchema())}
-</script>
+          {JSON.stringify(generateBreadcrumbSchema())}
+        </script>
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            "name": "mTap",
-            "url": "https://mtap.byklabs.store/",
-            "logo": "https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2022-04/mTapSocialImage.png",
-            "contactPoint": {
+            name: "mTap",
+            url: "https://mtap.byklabs.store/",
+            logo: "https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2022-04/mTapSocialImage.png",
+            contactPoint: {
               "@type": "ContactPoint",
-              "telephone": "+1-800-555-5555",
-              "contactType": "Customer Service"
-            }
+              telephone: "+1-800-555-5555",
+              contactType: "Customer Service",
+            },
           })}
         </script>
       </Head>
-      
-    <div
-      style={{
-        marginTop: "12rem",
-        display: "flex",
-        justifyContent: "center",
-        flexDirection: "column",
-      }}
-    >
-      
-      <div style={{ width: "80%", margin: "0 auto" }}>
-        {/* Breadcrumbs */}
-      <div role="presentation" onClick={handleClick} style={{marginBottom:'4rem'}}>
-      <Breadcrumbs aria-label="breadcrumb" separator={<NavigateNextIcon fontSize="medium" sx={{color:"white"}}/>} sx={{display:'inline-block', color:'black',border:'1px solid transparent'}}>
-        <Link underline="hover" color="inherit" href="/"  className="linkBlog">
-        <Typography variant="contained" sx={{color:'white',fontSize:'30px',':hover': {
-            backgroundColor: 'gray', // Change background color on hover
-            color: 'white', // Change text color on hover
-          }}}> Home</Typography>
-         
-        </Link>
-        <Link
-          underline="hover"
-          color="inherit"
-          href="/blog"
-          className="linkBlog"
-        >
-         <Typography variant="contained" sx={{color:'white',fontSize:'30px',':hover': {
-            backgroundColor: 'gray', // Change background color on hover
-            color: 'white', // Change text color on hover
-          }}}> Blog</Typography>
-        </Link>
-        <Typography
-          underline="hover"
-          color="white"
-       
-          aria-current="blogDetails"
-        >
-           <Typography variant="contained" sx={{color:'white',fontSize:'30px',':hover': {
-            backgroundColor: 'gray', // Change background color on hover
-            color: 'white', // Change text color on hover
-          }}} >   {heading}</Typography>
-        
-        </Typography>
-      </Breadcrumbs>
-    </div>
-        <Card
-          variant="plain"
-          sx={{
-            maxHeight: "1100vh",
-            width: "100%",
-            overflow: "auto",
-            marginBottom: "2rem",
-            borderRadius: 20,
-          }}
-        >
-          <CardMedia
-            component="img"
-            alt="blog"
-            image={image}
-            sx={{ maxHeight: 550 }}
-          />
-          <Box
-            sx={{ display: "flex", flexDirection: "column", margin: "2rem" }}
+
+      <div
+        style={{
+          marginTop: "12rem",
+          display: "flex",
+          justifyContent: "center",
+          flexDirection: "column",
+        }}
+      >
+        <div style={{ width: "80%", margin: "0 auto" }}>
+          {/* Breadcrumbs */}
+          <div
+            role="presentation"
+            onClick={handleClick}
+            style={{ marginBottom: "4rem" }}
           >
-            <CardContent sx={{ flex: "1 0 auto" }}>
-              <Typography
-                variant="h6"
-                sx={{
-                  display: "inline-block",
-                  marginBottom: "1rem",
-                  backgroundColor: getBackgroundColor(subheading),
-                  color: subheading === "NEWS & EVENTS" ? "black" : "white",
-                  fontWeight: "600",
-                  border: "8px solid transparent",
-                }}
+            <Breadcrumbs
+              aria-label="breadcrumb"
+              separator={
+                <NavigateNextIcon fontSize="medium" sx={{ color: "white" }} />
+              }
+              sx={{
+                display: "inline-block",
+                color: "black",
+                border: "1px solid transparent",
+              }}
+            >
+              <Link
+                underline="hover"
+                color="inherit"
+                href="/"
+                className="linkBlog"
               >
-                {subheading}
-              </Typography>
-
-              <Typography
-                variant="h1"
-                style={{
-                  fontSize: "60px",
-                  fontWeight: "900",
-
-                  marginBottom: "1rem",
-                }}
-              >
-                {heading}
-              </Typography>
-              <Box
-                sx={{
-                  display: "flex",
-                  justifyContent: "start",
-                  flexDirection: "column",
-                }}
-              >
-                <Typography variant="h6" color="text.secondary">
-                  26 january 2023
+                <Typography
+                  variant="contained"
+                  sx={{
+                    color: "white",
+                    fontSize: "30px",
+                    ":hover": {
+                      backgroundColor: "gray", // Change background color on hover
+                      color: "white", // Change text color on hover
+                    },
+                    "@media (max-width: 767px)": {
+                      fontSize: "14px",
+                    },
+                  }}
+                >
+                  {" "}
+                  Home
                 </Typography>
+              </Link>
+              <Link
+                underline="hover"
+                color="inherit"
+                href="/blog"
+                className="linkBlog"
+              >
+                <Typography
+                  variant="contained"
+                  sx={{
+                    color: "white",
+                    fontSize: "30px",
+                    ":hover": {
+                      backgroundColor: "gray", // Change background color on hover
+                      color: "white", // Change text color on hover
+                    },
+                    "@media (max-width: 767px)": {
+                      fontSize: "14px",
+                    },
+                  }}
+                >
+                  {" "}
+                  Blog
+                </Typography>
+              </Link>
+              <Typography
+                underline="hover"
+                color="white"
+                aria-current="blogDetails"
+              >
+                <Typography
+                  variant="contained"
+                  sx={{
+                    color: "white",
+                    fontSize: "30px",
+                    ":hover": {
+                      backgroundColor: "gray", // Change background color on hover
+                      color: "white", // Change text color on hover
+                    },
+                    "@media (max-width: 767px)": {
+                      fontSize: "14px",
+                    },
+                  }}
+                >
+                  {" "}
+                  {heading}
+                </Typography>
+              </Typography>
+            </Breadcrumbs>
+          </div>
+          <Card
+            variant="plain"
+            sx={{
+              maxHeight: "1100vh",
+              width: "100%",
+              overflow: "auto",
+              marginBottom: "2rem",
+              borderRadius: 20,
+            }}
+          >
+            <CardMedia
+              component="img"
+              alt="blog"
+              image={image}
+              sx={{ maxHeight: 550 }}
+            />
+            <Box
+              sx={{ display: "flex", flexDirection: "column", margin: "2rem" }}
+            >
+              <CardContent sx={{ flex: "1 0 auto" }}>
                 <Typography
                   variant="h6"
-                  color="text.secondary"
-                  sx={{ marginBottom: "2rem" }}
+                  sx={{
+                    display: "inline-block",
+                    marginBottom: "1rem",
+                    backgroundColor: getBackgroundColor(subheading),
+                    color: subheading === "NEWS & EVENTS" ? "black" : "white",
+                    fontWeight: "600",
+                    border: "8px solid transparent",
+                    "@media (max-width: 767px)": {
+                      fontSize: "12px",
+                    },
+                  }}
                 >
-                  By: {author}
+                  {subheading}
                 </Typography>
-              </Box>
-              {blogDetailData.content.map((item, index) => (
-                <Box key={index} sx={{ margin: "1rem" }}>
-                  {item.title && (
-                    <Typography
-                      variant="h3"
-                      style={{ fontWeight: "700", marginBottom: "2rem" }}
-                    >
-                      {item.title}
-                    </Typography>
-                  )}
-                  {item.subtitle && (
-                    <Typography
-                      variant="h4"
-                      color="text.secondary"
-                      style={{ fontWeight: "700", marginBottom: "2rem" }}
-                    >
-                      {item.subtitle}
-                    </Typography>
-                  )}
-                  {item.heading && (
-                    <Typography
-                      variant="h4"
-                      style={{ fontWeight: "700", marginBottom: "2rem" }}
-                    >
-                      {item.heading}
-                    </Typography>
-                  )}
-                  <Typography variant="body1" style={{ fontSize: "25px" }}>
-                    {item.text}
+
+                <Typography
+                  variant="h1"
+                  sx={{
+                    fontSize: "60px",
+                    fontWeight: "900",
+
+                    marginBottom: "1rem",
+                    "@media (max-width: 767px)": {
+                      fontSize: "35px",
+                    },
+                  }}
+                >
+                  {heading}
+                </Typography>
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: "start",
+                    flexDirection: "column",
+                  }}
+                >
+                  <Typography
+                    variant="h6"
+                    color="text.secondary"
+                    sx={{
+                      "@media (max-width: 767px)": {
+                        fontSize: "15px",
+                      },
+                    }}
+                  >
+                    26 january 2023
+                  </Typography>
+                  <Typography
+                    variant="h6"
+                    color="text.secondary"
+                    sx={{
+                      marginBottom: "2rem",
+                      "@media (max-width: 767px)": {
+                        fontSize: "15px",
+                      },
+                    }}
+                  >
+                    By: {author}
                   </Typography>
                 </Box>
-              ))}
-              <Box sx={{ marginTop: "2rem" }}>
+                {blogDetailData.content.map((item, index) => (
+                  <Box key={index} sx={{ margin: "1rem" }}>
+                    {item.title && (
+                      <Typography
+                        variant="h3"
+                        sx={{
+                          fontWeight: "700",
+                          marginBottom: "2rem",
+                          "@media (max-width: 767px)": {
+                            fontSize: "30px",
+                          },
+                        }}
+                      >
+                        {item.title}
+                      </Typography>
+                    )}
+                    {item.subtitle && (
+                      <Typography
+                        variant="h4"
+                        color="text.secondary"
+                        sx={{
+                          fontWeight: "700",
+                          marginBottom: "2rem",
+                          "@media (max-width: 767px)": {
+                            fontSize: "25px",
+                          },
+                        }}
+                      >
+                        {item.subtitle}
+                      </Typography>
+                    )}
+                    {item.heading && (
+                      <Typography
+                        variant="h4"
+                        sx={{
+                          fontWeight: "700",
+                          marginBottom: "2rem",
+                          "@media (max-width: 767px)": {
+                            fontSize: "30px",
+                          },
+                        }}
+                      >
+                        {item.heading}
+                      </Typography>
+                    )}
+                    <Typography
+                      variant="body1"
+                      sx={{
+                        fontSize: "25px",
+                        "@media (max-width: 767px)": {
+                          fontSize: "20px",
+                        },
+                      }}
+                    >
+                      {item.text}
+                    </Typography>
+                  </Box>
+                ))}
+                <Box sx={{ marginTop: "2rem" }}>
+                  <Typography
+                    variant="h4"
+                    sx={{
+                      fontWeight: "700",
+                      marginBottom: "1rem",
+                      "@media (max-width: 767px)": {
+                        fontSize: "30px",
+                      },
+                    }}
+                  >
+                    Sources:
+                  </Typography>
+                  <ul>
+                    {blogDetailData.sources.map((source, index) => (
+                      <li key={index} style={{ marginBottom: "0.5rem" }}>
+                        <Box component="span" sx={{ display: "inline" }}>
+                          <Typography
+                            variant="body1"
+                            sx={{
+                              fontSize: "25px",
+                              display: "inline",
+                              marginRight: "0.5rem",
+                              "@media (max-width: 767px)": {
+                                fontSize: "20px",
+                              },
+                            }}
+                          >
+                            {source.name}:
+                          </Typography>
+                          <Typography
+                            variant="body1"
+                            component="a"
+                            href={source.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            sx={{
+                              display: "inline",
+                              color: "black",
+                              fontSize: "25px",
+                              "@media (max-width: 767px)": {
+                                display: "inline-block",
+                                fontSize: "16px",
+                              },
+                            }}
+                          >
+                            {source.url}
+                          </Typography>
+                        </Box>
+                      </li>
+                    ))}
+                  </ul>
+                </Box>
+              </CardContent>
+            </Box>
+          </Card>
+        </div>
+        <div style={{ width: "80%", margin: "0 auto" }}>
+          <Card
+            sx={{
+              display: "flex",
+              marginBottom: "6rem",
+              maxHeight: "100vh",
+              width: "100%",
+              overflow: "auto",
+              borderRadius: 20,
+              borderRadius: 20,
+              overflow: "auto",
+            }}
+          >
+            {" "}
+            <Avatar
+              alt={author}
+              src={avatar}
+              sx={{
+                width: 270,
+                height: 270,
+                margin: "4rem",
+                "@media (max-width: 767px)": {
+                  width: 130,
+                  height: 130,
+                  margin: "1rem",
+                },
+              }}
+            />
+            <Box
+              sx={{
+                marginTop: "2rem",
+                marginLeft: "8rem",
+                width: "100%",
+                "@media (max-width: 767px)": {
+                  marginLeft: "1rem",
+                  marginTop: 0,
+                },
+              }}
+            >
+              <CardContent>
+                <Typography
+                  variant="h5"
+                  sx={{
+                    marginBottom: ".5rem",
+                    "@media (max-width: 767px)": {
+                      fontSize: "20px",
+                    },
+                  }}
+                >
+                  Author
+                </Typography>
+                <Typography
+                  variant="h3"
+                  sx={{
+                    color: "black",
+                    fontWeight: "900",
+                    maxWidth: "40vw",
+                    marginBottom: ".5rem",
+                    "@media (max-width: 767px)": {
+                      maxWidth: "50vw",
+                      fontSize: "25px",
+                    },
+                  }}
+                >
+                  {author}
+                </Typography>
                 <Typography
                   variant="h4"
-                  style={{ fontWeight: "700", marginBottom: "1rem" }}
+                  color="text.secondary"
+                  component="div"
+                  sx={{
+                    color: "black",
+                    maxWidth: "40vw",
+                    marginBottom: "2rem",
+                    "@media (max-width: 767px)": {
+                      maxWidth: "50vw",
+                      fontSize: "23px",
+                    },
+                  }}
                 >
-                  Sources:
+                  {authorTitle}
                 </Typography>
-                <ul>
-                  {blogDetailData.sources.map((source, index) => (
-                    <li key={index} style={{ marginBottom: "0.5rem" }}>
-                      <Box component="span" sx={{ display: "inline" }}>
-                        <Typography
-                          variant="body1"
-                          style={{
-                            fontSize: "25px",
-                            display: "inline",
-                            marginRight: "0.5rem",
-                          }}
-                        >
-                          {source.name}:
-                        </Typography>
-                        <Typography
-                          variant="body1"
-                          component="a"
-                          href={source.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          style={{ display: "inline", color: "black" ,fontSize: "25px",}}
-                        >
-                          {source.url}
-                        </Typography>
-                      </Box>
-                    </li>
-                  ))}
-                </ul>
-              </Box>
-            </CardContent>
-          </Box>
-        </Card>
-      </div>
-      <div style={{ width: "80%", margin: "0 auto" }}>
-        <Card
-          sx={{
-            display: "flex",
-            marginBottom: "6rem",
-            maxHeight: "100vh",
-            width: "100%",
-            overflow: "auto",
+                <Typography
+                  variant="h4"
+                  color="text.secondary"
+                  component="div"
+                  sx={{
+                    color: "black",
+                    maxWidth: "40vw",
+                    marginBottom: "2rem",
+                    "@media (max-width: 767px)": {
+                      maxWidth: "50vw",
+                      fontSize: "23px",
+                    },
+                  }}
+                >
+                  Email: abc123@gmail.com
+                </Typography>
+                <Box sx={{ display: "flex", gap: 2 }}>
+                  <LinkedInIcon
+                    sx={{
+                      fontSize: 50,
+                      "@media (max-width: 767px)": {
+                        maxWidth: "40vw",
+                        fontSize: 30,
+                      },
+                    }}
+                  />
+                  <InstagramIcon
+                    sx={{
+                      fontSize: 50,
+                      "@media (max-width: 767px)": {
+                        fontSize: 30,
+                      },
+                    }}
+                  />
+                  <FacebookRoundedIcon
+                    sx={{
+                      fontSize: 50,
+                      "@media (max-width: 767px)": {
+                        fontSize: 30,
+                      },
+                    }}
+                  />
+                  <XIcon
+                    sx={{
+                      fontSize: 50,
+                      "@media (max-width: 767px)": {
+                        fontSize: 30,
+                      },
+                    }}
+                  />
+                  <YouTubeIcon
+                    sx={{
+                      fontSize: 50,
+                      "@media (max-width: 767px)": {
+                        fontSize: 30,
+                      },
+                    }}
+                  />
+                </Box>
+              </CardContent>
+            </Box>
+          </Card>
+        </div>
 
-            borderRadius: 20,
-            borderRadius: 20,
-            overflow: "auto",
-          }}
-        >
-          {" "}
-          <Avatar
-            alt={author}
-            src={avatar}
-            sx={{ width: 270, height: 270,margin:'4rem'}}
-          />
-          <Box
-            sx={{ marginTop:'2rem', marginLeft: "8rem" ,width:'100%'}}
+        {/* Continue reading card  */}
+        <div>
+          <h1 
+            className="continueReadingBlog"
+            style={{
+              fontSize: "80px",
+              fontWeight: "900",
+              color:'white',
+              textAlign: "center",
+              marginBottom: "4rem"
+             
+            }}
           >
-          
-            <CardContent >
-              <Typography variant="h5" sx={{marginBottom:'.5rem'}}>Author</Typography>
-              <Typography
-                variant="h3"
-                sx={{
-                  color: "black",
-                  fontWeight: "900",
-                  maxWidth: "40vw",
-                  marginBottom:'.5rem'
-                }}
-              >
-                {author}
-              </Typography>
-              <Typography
-                variant="h4"
-                color="text.secondary"
-                component="div"
-                sx={{
-                  color: "black",
-                  maxWidth: "40vw",
-                  marginBottom:'2rem'
-                }}
-              >
-                {authorTitle}
-              </Typography>
-              <Typography
-                variant="h4"
-                color="text.secondary"
-                component="div"
-                sx={{
-                  color: "black",
-                  maxWidth: "40vw",
-                  marginBottom:'2rem'
-                }}
-              >
-              Email:  abc123@gmail.com
-              </Typography>
-              <Box sx={{display:'flex' , gap:2}}>
-              <LinkedInIcon sx={{ fontSize: 50 }}/>
-              <InstagramIcon sx={{ fontSize: 50 }}/>
-              <FacebookRoundedIcon sx={{ fontSize: 50 }}/>
-              <XIcon sx={{ fontSize: 50 }}/>
-              <YouTubeIcon sx={{ fontSize: 50 }}/>
-
-              </Box>
-            </CardContent>
-          </Box>
-        </Card>
-      </div>
-
-
-      {/* Continue reading card  */}
-      <div>
-        <h1
-          className="googleReviewCardsHeading"
-          style={{
-            fontSize: "80px",
-            fontWeight: "900",
-            textAlign: "center",
-            marginBottom: "4rem",
-          }}
-        >
-          Continue Reading
-        </h1>
-      </div>
-      <div
-          style={{
+            Continue Reading
+          </h1>
+        </div>
+        <Box
+          sx={{
             display: "grid",
             gridTemplateColumns: "repeat(2, minmax(350px, 1fr))",
             gap: "2rem",
             justifyContent: "center",
             width: "80%",
-            margin: "0 auto",
+            margin: "0 auto"
+            ,"@media (max-width: 767px)": {
+              gridTemplateColumns: "1fr", 
+              width: "80%",
+              // marginLeft:'2rem'
+                  },
           }}
         >
-        
           {blogData.map((blog, index) => (
             <Card
               key={index}
@@ -592,7 +782,7 @@ document.head.appendChild(breadcrumbScript);
                         image: blog.image,
                         author: blog.author,
                         authorTitle: blog.authorTitle,
-                        avatar:blog.avatar
+                        avatar: blog.avatar,
                         // Add any other data you want to pass
                       },
                     }}
@@ -626,8 +816,8 @@ document.head.appendChild(breadcrumbScript);
               </CardActions>
             </Card>
           ))}
-        </div>
-    </div>
+        </Box>
+      </div>
     </>
   );
 };

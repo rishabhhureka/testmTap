@@ -2455,6 +2455,12 @@ footer .copy {
 .cardBlog{
     grid-template-columns: "1fr", 
 }
+.continueReadingBlog {
+    font-size: 50px !important;
+}
+.blogHeading {
+font-size: 65px !important;
+}
     .card-wrap h2,
     footer h3 {
         margin-bottom: 20px;

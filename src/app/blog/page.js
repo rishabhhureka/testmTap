@@ -10,7 +10,7 @@ import Head from "next/head";
 const mainBlogData = {
   id: "1",
   image:
-    "https://wallpapers.com/images/featured/link-pictures-16mi3e7v5hxno9c4.jpg",
+    "https://www.impelsys.com/wp-content/uploads/2021/06/Importance-of-Implementing-Mobility-Solutions-for-your-Enterprise.jpg",
   subheading: "PRODUCTS UPDATES",
   heading: "Unleashing the Power of Google Reviews: The mTap NFC Solution",
   date: "June 26, 2023",
@@ -20,17 +20,7 @@ const mainBlogData = {
   authorTitle: "CEO & Founder @mTap",
 };
 const blogData = [
-  {
-    id: "1",
-    image:
-      "https://st3.depositphotos.com/3591429/13269/i/450/depositphotos_132694218-stock-photo-woman-writing-notes-in-diary.jpg",
-    subheading: "PRODUCTS UPDATES",
-    heading: "Unleashing the Power of Google Reviews: The mTap NFC Solution",
-    avatar:
-      "https://alumni.cusat.ac.in/wp-content/themes/cera/assets/images/avatars/user-avatar.png",
-    author: "Roopak Gupta",
-    authorTitle: "CEO & Founder @mTap",
-  },
+  
   {
     id: "2",
     image:
@@ -75,6 +65,17 @@ const blogData = [
     author: "John Smith",
     authorTitle: "Lead Developer @FinTech",
   },
+  // {
+  //   id: "1",
+  //   image:
+  //     "https://st3.depositphotos.com/3591429/13269/i/450/depositphotos_132694218-stock-photo-woman-writing-notes-in-diary.jpg",
+  //   subheading: "PRODUCTS UPDATES",
+  //   heading: "Unleashing the Power of Google Reviews: The mTap NFC Solution",
+  //   avatar:
+  //     "https://alumni.cusat.ac.in/wp-content/themes/cera/assets/images/avatars/user-avatar.png",
+  //   author: "Roopak Gupta",
+  //   authorTitle: "CEO & Founder @mTap",
+  // },
 ];
 const getBackgroundColor = (subheading) => {
   switch (subheading) {
@@ -114,7 +115,7 @@ const Blog = () => {
       <div style={{ marginTop: "12rem", width: "100%" }}>
         <div>
           <h1
-            // className="googleReviewCardsHeading"
+            className="blogHeading"
             style={{
               fontSize: "80px",
               fontWeight: "900",
@@ -227,7 +228,7 @@ const Blog = () => {
                     // Styles for screens up to 768px wide
                     width: "80%",
                     height: "60vh",
-                    marginRight: "2rem",
+                   
                   },
                 }}
                 
@@ -343,7 +344,7 @@ const Blog = () => {
               ,"@media (max-width: 767px)": {
                 gridTemplateColumns: "1fr", 
                 width: "80%",
-                marginLeft:'2rem'
+              
                     },
             }}
           >
