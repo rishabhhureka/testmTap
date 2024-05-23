@@ -1,5 +1,5 @@
 'use client'
-import * as React from 'react';
+import {useEffect, useState} from 'react';
 import Box from '@mui/joy/Box';
 import FormLabel from '@mui/joy/FormLabel';
 import Radio, { radioClasses } from '@mui/joy/Radio';
@@ -20,17 +20,42 @@ import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
 import Head from 'next/head';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 const images = [
   { src: googleReviewButton, alt: 'Image 1' },
   { src: qrCode, alt: 'Image 2' },
   { src: googleReviewButton2, alt: 'Image 3' },
 
 ];
+const accordionData = [
+  {
+    question: 'Will my gift recipient be able to make changes to their profile?',
+    answer: 'Yes, they will receive instructions for claiming their mTap account and making updates to their profile in the packaging of their new card.'
+  },
+  {
+    question: 'Does mTap work Internationally?',
+    answer: 'Yes, they will receive instructions for claiming their mTap account and making updates to their profile in the packaging of their new card.'
+  },
+  {
+    question: 'Can I add a custom logo or job title to a gifted card?',
+    answer: 'Yes, they will receive instructions for claiming their mTap account and making updates to their profile in the packaging of their new card.'
+  },
+  {
+    question: 'How does my gift recipient use their card?',
+    answer: 'Yes, they will receive instructions for claiming their mTap account and making updates to their profile in the packaging of their new card.'
+  }
+];
+const question = "Will my gift recipient be able to make changes to their profile?";
+  const answer = "Yes, they will receive instructions for claiming their mTap account and making updates to their profile in the packaging of their new card.";
+
 const Product = () => {
-    const [quantity, setQuantity] = React.useState(1);
-    const [count, setCount] = React.useState(1);
-      
-    const [selectedImage, setSelectedImage] = React.useState(images[0]);
+    const [quantity, setQuantity] = useState(1);
+    const [count, setCount] = useState(1);
+  const [selectedImage, setSelectedImage] = useState(images[0]);
 
     const colors = [
         { name: 'danger', bgColor: 'danger.solidBg' },
@@ -51,12 +76,64 @@ const Product = () => {
     const handleQuantityChange = (event) => {
       setQuantity(event.target.value);
     };
+    const faqScript = `{
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        ${accordionData.map((item, index) => `{
+          "@type": "Question",
+          "name": "${item.question}",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "${item.answer.replace(/"/g, '\\"')}"
+          }
+        }`).join(',\n')}
+      ]
+    }`;
+  
+    // const faqJsonLD = JSON.stringify(faqSchema);
+    useEffect(() => {
+      // Check if the script already exists in the head
+      const existingScript = document.getElementById('faq-schema');
+      if (!existingScript) {
+        // Create the script element and add the FAQ schema as JSON-LD
+        const script = document.createElement('script');
+        script.id = 'faq-schema';
+        script.type = 'application/ld+json';
+        script.innerHTML = faqScript;
+        document.head.appendChild(script);
+      }
+  
+      // Cleanup function to remove the script when the component unmounts
+      return () => {
+        const scriptToRemove = document.getElementById('faq-schema');
+        if (scriptToRemove) {
+          document.head.removeChild(scriptToRemove);
+        }
+      };
+    }, []);
   return (
     <>
     <Head>
     <title>Google Review Cards</title>
     <meta name="description" content="Elevate your Google Review strategy with the Google Review Cards component. Customize card colors, upload your business logo, and choose the card pack size that suits your needs." />
-    <meta name="keywords" content="product, ecommerce, User engagement, SEO-friendly, Customizable colors, Google Review Cards" />
+    <meta name="keywords" content="product, ecommerce, User engagement, SEO-friendly, Customizable colors, Google Review Cards" />4
+    {/* <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: faqJsonLD }} /> */}
+    <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "mTap",
+              "url": "https://mtap.byklabs.store/",
+              "logo": "https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2022-04/mTapSocialImage.png",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+1-800-555-5555",
+                "contactType": "Customer Service"
+              }
+            })}
+          </script>
+  
   </Head>
     <Card >
         <h1  className="googleReviewCardsHeading" style={{fontSize:'80px', fontWeight:"900",textAlign:'center'}}>Google Review Cards</h1>
@@ -275,7 +352,29 @@ const Product = () => {
        <h2 style={{fontSize:'70px',fontWeight:'bold'}}>Description</h2>
        <Typography sx={{fontSize:'30px',width:'60vw',marginBottom:'5rem'}} className="DescriptionP">Want more reviews from happy customers? Just have them tap or scan the QR code and take them directly to your Google Review Profile. Get more positive feedback instantly. You do not have to do anything . We will configure the card for you with the Google Review link of your business. No Profile creation or any account management</Typography>
        </Box>
+       <Box sx={{display:"flex" , flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',}}>
+            <h2 style={{fontSize:'70px',fontWeight:'bold',marginBottom:'1rem'}}>FAQ</h2>
+            {accordionData.map((item, index) => (
+        <Accordion key={index} defaultExpanded={index === 0} sx={{marginBottom:'2rem',padding:'2rem'}}>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon sx={{fontSize :40}} />}
+            aria-controls={`panel${index + 1}-content`}
+            id={`panel${index + 1}-header`}
+          >
+            <Typography sx={{fontSize:'30px', fontWeight:600}}>{item.question}</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography sx={{fontSize:'30px'}}> 
+              {item.answer}
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+      ))}
+    </Box>
        </Card>
+    
        </>
   )
 }
