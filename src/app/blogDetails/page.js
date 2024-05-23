@@ -18,6 +18,7 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 import Link from "next/link";
 import Head from "next/head";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 const getBackgroundColor = (subheading) => {
   switch (subheading) {
     case "PRODUCTS UPDATES":
@@ -354,6 +355,9 @@ const BlogDetails = () => {
               </Typography>
             </Breadcrumbs>
           </div>
+          <Link href="/blog"  ><ArrowBackIosNewIcon sx={{fontSize:40,marginBottom:'1rem' ,color:'beige'}} /></Link>
+  
+         
           <Card
             variant="plain"
             sx={{
@@ -364,6 +368,7 @@ const BlogDetails = () => {
               borderRadius: 20,
             }}
           >
+          
             <CardMedia
               component="img"
               alt="blog"
