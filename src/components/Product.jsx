@@ -116,6 +116,7 @@ const Product = () => {
     <>
     <Head>
     <title>Google Review Cards</title>
+    <meta property="og:image" content="https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2024-04/Google-Review-Card-01.png" />
     <meta name="description" content="Elevate your Google Review strategy with the Google Review Cards component. Customize card colors, upload your business logo, and choose the card pack size that suits your needs." />
     <meta name="keywords" content="product, ecommerce, User engagement, SEO-friendly, Customizable colors, Google Review Cards" />4
     {/* <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: faqJsonLD }} /> */}
