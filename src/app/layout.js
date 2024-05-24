@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
         <link rel="canonical" href="https://mtap.byklabs.store/" />
-        <link rel="icon"  href="/mtaplogoWeb.png" loading="lazy" />
+        <link rel="icon"  href="/mtaplogoWeb.png"  />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script
           type="application/ld+json"

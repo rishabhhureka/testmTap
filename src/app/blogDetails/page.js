@@ -102,7 +102,7 @@ const blogData = [
   {
     id: "1",
     image:
-    "/images/blog1.png",
+    "/images/blog1.jpg",
     subheading: "PRODUCTS UPDATES",
     heading: "Unleashing the Power of Google Reviews: The mTap NFC Solution",
     avatar:
@@ -113,7 +113,7 @@ const blogData = [
   {
     id: "2",
     image:
-    "/images/blog2.png",
+    "/images/blog2.jpg",
     subheading: "NETWORKING TIPS",
     heading: "Exploring the Future of NFC Technology",
     avatar:
@@ -124,7 +124,7 @@ const blogData = [
   {
     id: "3",
     image:
-    "/images/blog3.png",
+    "/images/blog3.jpg",
     subheading: "PRODUCTS UPDATES",
     heading: "The Rise of Contactless Payments",
     avatar:
@@ -135,7 +135,7 @@ const blogData = [
   {
     id: "4",
     image:
-    "/images/blog4.png",
+    "/images/blog4.jpg",
     subheading: "NEWS & EVENTS",
     heading: "The Rise of Contactless Payments",
     avatar:
