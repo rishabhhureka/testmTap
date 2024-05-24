@@ -102,7 +102,7 @@ const blogData = [
   {
     id: "1",
     image:
-      "https://st3.depositphotos.com/3591429/13269/i/450/depositphotos_132694218-stock-photo-woman-writing-notes-in-diary.jpg",
+    "/images/blog1.png",
     subheading: "PRODUCTS UPDATES",
     heading: "Unleashing the Power of Google Reviews: The mTap NFC Solution",
     avatar:
@@ -113,7 +113,7 @@ const blogData = [
   {
     id: "2",
     image:
-      "https://st3.depositphotos.com/3591429/13269/i/450/depositphotos_132694218-stock-photo-woman-writing-notes-in-diary.jpg",
+    "/images/blog2.png",
     subheading: "NETWORKING TIPS",
     heading: "Exploring the Future of NFC Technology",
     avatar:
@@ -124,7 +124,7 @@ const blogData = [
   {
     id: "3",
     image:
-      "https://st3.depositphotos.com/3591429/13269/i/450/depositphotos_132694218-stock-photo-woman-writing-notes-in-diary.jpg",
+    "/images/blog3.png",
     subheading: "PRODUCTS UPDATES",
     heading: "The Rise of Contactless Payments",
     avatar:
@@ -135,7 +135,7 @@ const blogData = [
   {
     id: "4",
     image:
-      "https://st3.depositphotos.com/3591429/13269/i/450/depositphotos_132694218-stock-photo-woman-writing-notes-in-diary.jpg",
+    "/images/blog4.png",
     subheading: "NEWS & EVENTS",
     heading: "The Rise of Contactless Payments",
     avatar:

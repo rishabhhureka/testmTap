@@ -7,8 +7,8 @@ import Header from '../components/Header';
 const inter = Inter({ subsets: ["latin"] });
 const Footer = React.lazy(() => import('../components/Footer'));
 export const metadata = {
-  title: "Google Review Cards",
-  description: "Elevate your Google Review strategy with the Google Review Cards component.Customize card colors, upload your business logo, and choose the card pack size that suits your needs.",
+  title: "mTap",
+  description: "Digital business cards by mTap allow you to instantly share contact info, social media & more with just a tap. Create your digital business card for free today.",
 };
 
 export default function RootLayout({ children }) {
