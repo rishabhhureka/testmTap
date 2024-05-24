@@ -7,10 +7,11 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Avatar from "@mui/material/Avatar";
 import Head from "next/head";
+
 const mainBlogData = {
   id: "1",
   image:
-    "https://www.impelsys.com/wp-content/uploads/2021/06/Importance-of-Implementing-Mobility-Solutions-for-your-Enterprise.jpg",
+    "/images/blog1.png",
   subheading: "PRODUCTS UPDATES",
   heading: "Unleashing the Power of Google Reviews: The mTap NFC Solution",
   date: "June 26, 2023",
@@ -24,7 +25,7 @@ const blogData = [
   {
     id: "2",
     image:
-      "https://st3.depositphotos.com/3591429/13269/i/450/depositphotos_132694218-stock-photo-woman-writing-notes-in-diary.jpg",
+      "/images/blog2.png",
     subheading: "NETWORKING TIPS",
     heading: "Exploring the Future of NFC Technology",
     avatar:
@@ -35,7 +36,7 @@ const blogData = [
   {
     id: "3",
     image:
-      "https://st3.depositphotos.com/3591429/13269/i/450/depositphotos_132694218-stock-photo-woman-writing-notes-in-diary.jpg",
+      "/images/blog3.png",
     subheading: "PRODUCTS UPDATES",
     heading: "The Rise of Contactless Payments",
     avatar:
@@ -46,7 +47,7 @@ const blogData = [
   {
     id: "4",
     image:
-      "https://st3.depositphotos.com/3591429/13269/i/450/depositphotos_132694218-stock-photo-woman-writing-notes-in-diary.jpg",
+      "/images/blog4.png",
     subheading: "NEWS & EVENTS",
     heading: "The Rise of Contactless Payments",
     avatar:
@@ -57,7 +58,7 @@ const blogData = [
   {
     id: "5",
     image:
-      "https://st3.depositphotos.com/3591429/13269/i/450/depositphotos_132694218-stock-photo-woman-writing-notes-in-diary.jpg",
+      "/images/blog1.png",
     subheading: "USE CASES",
     heading: "The Rise of Contactless Payments",
     avatar:
@@ -227,7 +228,7 @@ const Blog = () => {
                   "@media (max-width: 767px)": {
                     // Styles for screens up to 768px wide
                     width: "80%",
-                    height: "60vh",
+                    height: "65vh",
                    
                   },
                 }}
@@ -353,8 +354,8 @@ const Blog = () => {
                 key={index}
                 variant="plain"
                 sx={{
-                  height: "70vh",
                   width: "100%",
+                  // height:'70vh',
                   overflow: "auto",
                   marginBottom: "2rem",
                   borderRadius: 20,
@@ -438,10 +439,11 @@ const Blog = () => {
                     </Link>
                   </CardContent>
                 </Box>
-                <CardActions sx={{ marginLeft: "2rem", gap: "1rem",
+                <CardActions sx={{ marginLeft: "2rem", gap: "1rem", marginBottom:'4rem',
                           "@media (max-width: 767px)": {
                             // Styles for screens up to 768px wide
-                            margin:0
+                            margin:0,
+                            marginBottom:'4rem',
                           }, }}>
                   <Avatar
                     alt={blog.author}

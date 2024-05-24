@@ -30,7 +30,7 @@ const Header = () => {
             />
           </button>
           <li>
-            <Link href="/" aria-current="page" className="nav-link">Product Page</Link>
+            <Link href="/product" aria-current="page" className="nav-link">Product Page</Link>
           </li>
           <li>
             <Link href="/blog" className="nav-link">Blog</Link>
