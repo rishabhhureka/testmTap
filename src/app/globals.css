@@ -356,7 +356,12 @@ footer button {
     text-decoration: none;
     width: 563px
 }
-
+.card-teams {
+    background: var(--Website-Green, #ffffff);
+    border-radius: 100px;
+    display: flex;
+    max-width: 100%
+}
 .card-inner {
     background: var(--Website-Green, #60c447);
     border-radius: 100px;

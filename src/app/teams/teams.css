@@ -1,0 +1,140 @@
+.business-pro-section {
+    /* position: relative; */
+    max-height: 115vh;
+    overflow: hidden;
+    margin-bottom: 4rem;
+  }
+  
+  .star-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  
+  /* .content-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+  } */
+  
+  .text-animated-block h1{
+margin-bottom: 2rem;
+  }
+  .text-animated-block h2 {
+    margin-bottom: 4rem;
+      }
+  .text-animated-block h5{
+    margin-bottom: 3rem;
+    font-size: 4rem;
+  }
+  .text-animated-block p {
+    font-size: 2rem;
+    margin-bottom: 4rem;
+  }
+  
+  .btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+  
+  .explore-btn,
+  .trial-btn {
+    padding: 1.8rem 1.6rem;
+    font-size: 25px;
+    
+    width: 50%;
+    font-weight: bolder;
+    cursor: pointer;
+    border-radius: 40px;
+  }
+  
+  .explore-btn {
+    background-color: #fff;
+    color: #333;
+
+  }
+  
+  .trial-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+   
+  }
+  /* styles/Home.css */
+  .teamsHeading h2{
+      color: #fff;
+      text-align: center;
+      font-size: 96px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: 105%;
+      margin-bottom: 25px;
+      margin-bottom: 4rem;
+
+  }
+.teamscontainer {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 2rem;
+  
+}
+
+.teamscard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  grid-gap: 2rem;
+}
+
+.teamscard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.teamsicon-container {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.teamsicon {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.teamstitle {
+  font-size:30px;
+  font-weight: 800;
+  margin: 1rem;
+  text-align: center;
+  color: #000;
+}
+
+/* .teamsdescription {
+  font-size: 0.9rem;
+  text-align: center;
+  color: #666;
+} */
+
+
+@media screen and (max-width:768px) {
+  .teamscard-grid {
+    grid-template-columns: repeat(1, minmax(250px, 1fr));
+}
+}
