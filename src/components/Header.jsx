@@ -5,12 +5,13 @@ import Image from "next/image";
 import mtapLogo from "../Img/mtapLogo.png";
 import menuIcon from "../Img/menu.png";
 import closeIcon from "../Img/close.png";
-import { getSession, withPageAuthRequired } from '@auth0/nextjs-auth0';
+// import { getSession, withPageAuthRequired } from '@auth0/nextjs-auth0';
 // import { renewToken } from '../utils/auth';
 const Header = async() => {
-  const session = await getSession();
-  const user = session?.user;
-  console.log(user);
+// const Header = async() => {
+  // const session = await getSession();
+  // const user = session?.user;
+  // console.log(user);
 
   // useEffect(() => {
   //   const renew = async () => {
@@ -59,7 +60,7 @@ const Header = async() => {
             <Link href="/teams" className="nav-link">For Teams</Link>
           </li> */}
         </ul>
-        <ul className="auth-links">
+        {/* <ul className="auth-links">
         {user ? (
             <li>
               <Link href="/api/auth/logout" aria-current="page" className="auth-link">Sign Out {user.nickname}</Link>
@@ -69,7 +70,7 @@ const Header = async() => {
               <Link href="/api/auth/login" aria-current="page" className="auth-link">Sign In</Link>
             </li>
           )}
-        </ul>
+        </ul> */}
       </nav>
     </header>
   );
