@@ -2,8 +2,7 @@ import React, { Suspense } from 'react';
 import { Inter } from "next/font/google";
 import "./globals.css"
 import Header from '../components/Header';
-// import Footer from '../components/Footer';
-
+import { UserProvider } from '@auth0/nextjs-auth0/client';
 const inter = Inter({ subsets: ["latin"] });
 const Footer = React.lazy(() => import('../components/Footer'));
 export const metadata = {
@@ -43,6 +42,7 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
+      <UserProvider>
       <body className={inter.className}>
         <Header />
         {children}
@@ -50,6 +50,7 @@ export default function RootLayout({ children }) {
         <Footer />
       </Suspense>
       </body>
+      </UserProvider>
     </html>
   );
 }
