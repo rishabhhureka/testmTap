@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-// import "../../styles/pro.css"
+import "./pro.css"
 import plusIcon from "../../Img/plus.baed9fac.svg";
 import star from "../../Img/stars.jpg";
 import networkingBusinessCards from "../../Img/card-img5.d3b90e5c.png";
@@ -78,7 +78,9 @@ export default function Pro() {
             alt="Star Background"
             layout="fill"
             objectFit="cover"
+            loading="eager"
             quality={100}
+            priority
           />
         </div>
         <section className="business-pro-module" data-v-0a07a5aa>

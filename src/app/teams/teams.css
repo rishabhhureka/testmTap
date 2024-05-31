@@ -100,13 +100,13 @@ margin-bottom: 2rem;
   padding: 3rem;
   background-color: #fff;
   border: 1px solid transparent;
-  border-radius: 50px;
+  border-radius: 100px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .teamsicon-container {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -119,22 +119,114 @@ margin-bottom: 2rem;
 }
 
 .teamstitle {
-  font-size:30px;
+  font-size:32px;
   font-weight: 800;
   margin: 1rem;
   text-align: center;
   color: #000;
 }
 
-/* .teamsdescription {
-  font-size: 0.9rem;
-  text-align: center;
-  color: #666;
-} */
+.dataSecurity img{
+  margin-bottom: 2rem;
+  }
+  .dataSecurity h2{
+    margin-bottom: 2rem;
+    }
+    .datasecurityspan{
+     line-height: 93px;
 
+      }
+  .cardDiv{
+    min-width: 100vw;
+  }
+.video1{
+ border-radius: 30px;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  width: 100%;
+  max-height: 80vh;
+}
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:767px) {
   .teamscard-grid {
     grid-template-columns: repeat(1, minmax(250px, 1fr));
+}
+.text-animated-block{
+padding: 50px 0;
+margin-bottom: 12rem;
+}
+.text-animated-block h1{
+  font-size: 180px;
+}
+.text-animated-block h2{
+  font-size: 100px;
+  margin-bottom: 2rem;
+}
+.text-animated-block h5{
+  font-size: 36px;
+  margin-bottom: 2rem;
+}
+.text-animated-block p{
+  font-size: 28px;
+}
+.explore-btn, .trial-btn {
+  padding: 1rem 1.6rem;
+  font-size: 20px;
+  width: 50%;
+  font-weight: bolder;
+  cursor: pointer;
+  border-radius: 40px;
+}
+.teamsHeading h2{
+  font-size: 47px;
+margin: 2rem;
+}
+.teamscontainer{
+  max-width: 95%;
+}
+.teamscard{
+  padding: 2rem;
+}
+.teamsicon-container{
+  width: 60px;
+  height: 60px;
+}
+.teamstitle{
+  font-size: 26px;
+}
+.video1{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.section1{
+  padding: 2rem !important;
+}
+.section1 img{
+ width: 250px;
+ height: 250px;
+
+}
+.card-inner .text-wrp h2{
+  display: flex;
+  text-align: center;
+  font-size: 35px;
+  width: 100vw;
+}
+.wrap-col{
+padding: 2rem;
+}
+.col-fix-full{
+  border-radius: 70px;
+}
+.full-card.flex-align {
+  padding: 30px;
+  display: block;
+}
+.full-card.flex-align h2{
+  font-size: 30px;
+  margin-bottom: 1rem;
+}
+.flex-justify-end, .flex-justify-end a{
+  margin-bottom: 20px;
 }
 }

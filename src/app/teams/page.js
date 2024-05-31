@@ -1,16 +1,24 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-// import "../../styles/pro.css"
+import Video from "../ui/video"
 
 import plusIcon from "../../Img/plus.baed9fac.svg";
 import star from "../../Img/stars.jpg";
-import followUpCard from "../../Img/card-img1.3c431fc5.png";
-import networkingHub from "../../Img/icons-min1.52053dab.svg";
-import syncCRM from "../../Img/icons-min2.a143bfa1.svg";
-import aiProfileCreation from "../../Img/icons-min3.6d3bf29b.svg";
-import followupText from "../../Img/icons-min4.35cc0ef3.svg";
-import scanContacts from "../../Img/icons-min5.d42066b4.svg";
+import followUpCard from "../../Img/image2.jpg";
+import oneStopSolution from "../../Img/Web.svg";
+import profileManagement from "../../Img/profileManagement.jpg";
+import supportImage from "../../Img/image3.svg";
+import followUpCard2 from "../../Img/image1.jpg";
+import crmIntegration from "../../Img/image3.svg";
+import ssoImage from "../../Img/image4.jpg";
+import waveIcon from "../../Img/icon6.jpg";
+import contactsIcon from "../../Img/icon3.jpg";
+import timerIcon from "../../Img/icon5.jpg";
+import messageIcon from "../../Img/icon2.jpg";
+import cardIcon from "../../Img/icon4.jpg";
+import contactIcon from "../../Img/icon1.jpg";
+import lockIcon from "../../Img/lock.png";
 import "./teams.css";
 // import { motion, useScroll, useTransform } from 'framer-motion';
 
@@ -106,6 +114,8 @@ export default function Teams() {
             layout="fill"
             objectFit="cover"
             quality={100}
+            loading="eager"
+            priority
           />
         </div>
         <section
@@ -114,7 +124,7 @@ export default function Teams() {
         >
           <div className="container container-xs" data-v-0a07a5aa>
             <div className="text-animated-block" data-v-0a07a5aa>
-              <h1 data-v-0a07a5aa>PRO</h1>
+              <h1 data-v-0a07a5aa >PRO</h1>
               <h2 data-v-0a07a5aa>FOR TEAMS</h2>
               <h5 data-v-0a07a5aa>
                 Seamless Lead Management Across Your Organization
@@ -142,10 +152,10 @@ export default function Teams() {
         data-v-0a07a5aa
       >
         <div className="card__content" style={{ width: "80%" }}>
-          <div className="card-inner" style={{ backgroundColor: "white" }}>
+          <div className="card-inner" style={{ backgroundColor: "white",padding:'4rem' }}>
             <div className="col">
               {/* Next.js Image for optimized image loading */}
-              <Image src={followUpCard} alt="" width={500} height={300} />
+              <Image src={followUpCard} alt="" width={500} height={300}   loading="lazy" />
             </div>
             <div className="col">
               <div className="text-wrp">
@@ -161,44 +171,10 @@ export default function Teams() {
                   while allowing you to manage company materials shown on their
                   profiles and track KPIs around networking success.
                 </p>
-                <a
-                  href="#"
-                  className="black-btn"
-                  aria-label="Read more about Make Follow Up Easy"
-                >
-                  Learn More
-                </a>
               </div>
             </div>
           </div>
         </div>
-        {/* <div className="container container-xs" data-v-0a07a5aa>
-                        <div className="card-inner card-type-2 pro-page" data-v-0a07a5aa>
-                            <div className="col" data-v-0a07a5aa><Image src={networkingBusinessCards} alt="NETWORKING"
-                                    data-v-0a07a5aa  /></div>
-                            <div className="col" data-v-0a07a5aa>
-                                <div className="text-wrp" data-v-0a07a5aa>
-                                    <p data-v-0a07a5aa>Networking with business cards has always been clunky. mTap Pro
-                                        handles everything for you, including automatic follow ups with new connections
-                                        and uploading contacts to your CRM.</p><a href="#" className="black-btn"
-                                        data-v-0a07a5aa>START FREE TRIAL</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div> */}
-        {/* Meeting with mTap means:
-
-Waving goodbye to manual input errors that cause companies to lose between 10 and 20% of their new contacts
-
-Scheduling meetings automatically without the dreaded back-and-forth time selection
-
-Spending your time continuing conversations, not manually inputting new contacts into your CRM
-
-Promptly following up with every person you want to meet again
-
-Throwing away paper business cards after you scan them (Finally, a clean desk!)
-
-Remembering the context of your relationship and action items for each new contact */}
       </section>
       <section className="business-card" data-v-0a07a5aa>
       <div className="teamsHeading" data-v-0a07a5aa>
@@ -211,14 +187,14 @@ Remembering the context of your relationship and action items for each new conta
     <div className="teamscard-grid" >
       <div className="teamscard">
         <div className="teamsicon-container">
-          <Image src={networkingHub} alt="Icon" className="teamsicon" />
+          <Image src={waveIcon} alt="Icon" className="teamsicon" loading="lazy" />
         </div>
         <h3 className="teamstitle">Waving goodbye to manual input errors that cause companies to lose between 10 and 20% of their new contacts</h3>
       </div>
 
       <div className="teamscard">
         <div className="teamsicon-container">
-          <Image src={syncCRM} alt="Icon" className="teamsicon" />
+          <Image src={contactsIcon} alt="Icon" className="teamsicon" loading="lazy" />
         </div>
         <h3 className="teamstitle">Scheduling meetings automatically without the dreaded back-and-forth time selection</h3>
      
@@ -226,7 +202,7 @@ Remembering the context of your relationship and action items for each new conta
 
       <div className="teamscard">
         <div className="teamsicon-container">
-          <Image src={aiProfileCreation} alt="Icon" className="teamsicon" />
+          <Image src={timerIcon} alt="Icon" className="teamsicon" loading="lazy" />
         </div>
         <h3 className="teamstitle">Spending your time continuing conversations, not manually inputting new contacts into your CRM</h3>
        
@@ -234,7 +210,7 @@ Remembering the context of your relationship and action items for each new conta
 
       <div className="teamscard">
         <div className="teamsicon-container">
-          <Image src={followupText} alt="Icon" className="teamsicon" />
+          <Image src={messageIcon} alt="Icon" className="teamsicon" loading="lazy" />
         </div>
         <h3 className="teamstitle">Promptly following up with every person you want to meet again</h3>
        
@@ -242,111 +218,285 @@ Remembering the context of your relationship and action items for each new conta
 
       <div className="teamscard">
         <div className="teamsicon-container">
-          <Image src={scanContacts} alt="Icon" className="teamsicon" />
+          <Image src={cardIcon} alt="Icon" className="teamsicon" loading="lazy" />
         </div>
-        <h3 className="teamstitle">Throwing away paper business cards after you scan them (Finally, a clean desk!)</h3>
+        <h3 className="teamstitle">Throwing away paper business cards after you scan them <span style={{fontWeight:'400'}}>(Finally, a clean desk!)</span></h3>
        
       </div>
       <div className="teamscard">
         <div className="teamsicon-container">
-          <Image src={scanContacts} alt="Icon" className="teamsicon" />
+          <Image src={contactIcon} alt="Icon" className="teamsicon" loading="lazy" />
         </div>
         <h3 className="teamstitle">Remembering the context of your relationship and action items for each new contact</h3>
        
       </div>
     </div>
   </div>
-        {/* <div className="teamcontainer teamscontainer-xs" data-v-0a07a5aa>
-          <div className="card-grid" data-v-0a07a5aa style={{flexDirection:'column'}}>
-            <div className="col" data-v-0a07a5aa>
-              <h2 data-v-0a07a5aa>
-              Meeting with mTap means:
-               
-              </h2>
+      </section>
+      {/* Video section  */}
+      <section
+        className="business-card"
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+         
+        }}
+        data-v-0a07a5aa
+      >
+        <div className="card__content" style={{ width: "80%" }}>
+   
+            <video  controls preload="none" className="video1" poster="/images/nfc-card.jpeg">
+        <source src="/videos/video1.mp4" type="video/mp4" />
+      </video>
+        </div>
+      </section>
+      {/* 1 */}
+      <section
+        className="business-card"
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+         
+        }}
+        data-v-0a07a5aa
+      >
+        <div className="card__content" style={{ width: "80%" }}>
+          <div className="card-inner section1" style={{ backgroundColor: "#fce93b" , padding:'4rem'}}>
+            <div className="col">
+              {/* Next.js Image for optimized image loading */}
+              <Image src={oneStopSolution} alt="" width={500} height={300} loading="lazy" />
             </div>
-            <div className="col" data-v-0a07a5aa>
-              <ul data-v-0a07a5aa>
-                <li data-v-0a07a5aa>
-                  <div className="overlap-group" data-v-0a07a5aa>
-                    <p className="text-wrapper" data-v-0a07a5aa>
-                      Organize relationships with mTap Networking Hub
-                    </p>
-                    <i data-v-0a07a5aa>
-                      <Image
-                        className="vector"
-                        src={networkingHub}
-                        alt="networkinghub"
-                        data-v-0a07a5aa
-                      />
-                    </i>
-                  </div>
-                </li>
-                <li data-v-0a07a5aa>
-                  <div className="overlap-group" data-v-0a07a5aa>
-                    <p className="text-wrapper" data-v-0a07a5aa>
-                      Automatically sync new contacts with your CRM
-                    </p>
-                    <i data-v-0a07a5aa>
-                      <Image
-                        className="vector"
-                        src={syncCRM}
-                        alt="synccrm"
-                        data-v-0a07a5aa
-                      />
-                    </i>
-                  </div>
-                </li>
-                <li data-v-0a07a5aa>
-                  <div className="overlap-group" data-v-0a07a5aa>
-                    <p className="text-wrapper" data-v-0a07a5aa>
-                      Build your profile with the help of AI-assisted profile
-                      creation
-                    </p>
-                    <i data-v-0a07a5aa>
-                      <Image
-                        className="vector"
-                        src={aiProfileCreation}
-                        alt="aiProfileCreation"
-                        data-v-0a07a5aa
-                      />
-                    </i>
-                  </div>
-                </li>
-                <li data-v-0a07a5aa>
-                  <div className="overlap-group" data-v-0a07a5aa>
-                    <p className="text-wrapper" data-v-0a07a5aa>
-                      Set up automatic follow-up from your email or by text
-                      message
-                    </p>
-                    <i data-v-0a07a5aa>
-                      <Image
-                        className="vector"
-                        alt="followuptext"
-                        src={followupText}
-                        data-v-0a07a5aa
-                      />
-                    </i>
-                  </div>
-                </li>
-                <li data-v-0a07a5aa>
-                  <div className="overlap-group" data-v-0a07a5aa>
-                    <p className="text-wrapper" data-v-0a07a5aa>
-                      Scan contacts from paper business cards with your camera.
-                    </p>
-                    <i data-v-0a07a5aa>
-                      <Image
-                        className="vector"
-                        src={scanContacts}
-                        alt="scancontacts"
-                        data-v-0a07a5aa
-                      />
-                    </i>
-                  </div>
-                </li>
-              </ul>
+            <div className="col">
+              <div className="text-wrp">
+                <h2 style={{ color: "black" }}>
+
+                  A One-Stop Solution
+                
+
+
+                </h2>
+                <p style={{ color: "black" }}>
+                mtApp’s intuitive admin dashboard allows you to create departments within your team and track in-limits that show up in different team profiles. Streamlined onboarding makes it easy for team members to use mtApp effectively from the start.
+                </p>
+               
+              </div>
             </div>
           </div>
-        </div> */}
+        </div>
+      </section>
+      {/* 2 */}
+      <section
+        className="business-card"
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+        data-v-0a07a5aa
+      >
+        <div className="card__content" style={{ width: "80%" }}>
+          <div className="card-inner section1" style={{ backgroundColor: "white",padding:'4rem' }}>
+            <div className="col">
+              {/* Next.js Image for optimized image loading */}
+              <Image src={profileManagement} alt="" width={500} height={300} loading="lazy" />
+            </div>
+         
+
+            <div className="col">
+              <div className="text-wrp profilemanagement">
+                <h2 style={{ color: "black" }}>
+                Team Profile Management
+                </h2>
+                <p style={{ color: "black" }}>
+                When your business evolves and updates its sales material or branding, it can be a challenge to ensure that everyone is using the most up-to-date versions while representing your organization. mtApp Pro keeps materials in your team’s profiles current, allowing you to manage and sync your brand presentation features without requiring action from each team member.
+
+
+                </p>
+              
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* 3 */}
+      <section
+        className="business-card"
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+        data-v-0a07a5aa
+      >
+        <div className="card__content" style={{ width: "80%" }}>
+          <div className="card-inner section1" style={{ backgroundColor: "#fce93b",padding:'4rem' }}>
+            <div className="col">
+              {/* Next.js Image for optimized image loading */}
+              <Image src={supportImage} alt="" width={500} height={300} loading="lazy" />
+            </div>
+           
+
+            <div className="col">
+              <div className="text-wrp">
+                <h2 style={{ color: "black" }}>
+                Enterprise Support
+                </h2>
+                <p style={{ color: "black" }}>
+                Get help 24/7 to take full advantage of mtApp Pro by using our extensive training video library for instructions to guide you through using all mtApp features.
+                </p>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* 4 */}
+      <section
+        className="business-card"
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+        data-v-0a07a5aa
+      >
+        <div className="card__content" style={{ width: "80%" }}>
+          <div className="card-inner section1" style={{ backgroundColor: "white" ,padding:'4rem'}}>
+            <div className="col">
+              {/* Next.js Image for optimized image loading */}
+              <Image src={followUpCard2} alt="" width={500} height={300} loading="lazy" />
+            </div>
+       
+
+            <div className="col">
+              <div className="text-wrp">
+                <h2 style={{ color: "black" }}>
+                Follow Up
+                </h2>
+                <p style={{ color: "black" }}>
+                While exchanging information is easy, maintaining follow-up can be hard. A recent study found that only 40% of people who exchange business cards and information follow up. mtApp Pro helps you meet goals through immediate follow-up afterwards. mtApp Pro Team messaging allows you to set reminders and allow for last views completely customizable messages.
+                </p>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* 5 */}
+      <section
+        className="business-card"
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+        data-v-0a07a5aa
+      >
+        <div className="card__content" style={{ width: "80%" }}>
+          <div className="card-inner section1" style={{ backgroundColor: "#fce93b",padding:'4rem' }}>
+            <div className="col crmImage" >
+              {/* Next.js Image for optimized image loading */}
+              <Image src={crmIntegration} alt="" width={500} height={300} loading="lazy" />
+            </div>
+            <div className="col">
+              <div className="text-wrp">
+                <h2 style={{ color: "black" }}>
+                CRM Integration
+                </h2>
+                <p style={{ color: "black" }}>
+                CRM integration saves your sales reps the hassle of manually updating their new contacts into separate databases and ensures they follow up and organize properly. Integrate any of the following CRM platforms to get started: HubSpot, Salesforce, Zoho, Keap, Pipedrive.
+                </p>
+              
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* 6 */}
+      <section
+        className="business-card"
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+        data-v-0a07a5aa
+      >
+        <div className="card__content" style={{ width: "80%" }}>
+          <div className="card-inner " style={{ backgroundColor: "white" ,padding:'4rem',height:'60vh'}}>
+            <div className="col">
+              {/* Next.js Image for optimized image loading */}
+              <Image src={ssoImage} alt="" width={500} height={300} loading="lazy" />
+            </div>
+            <div className="col">
+              <div className="text-wrp">
+                <h2 style={{ color: "black" }}>
+                Secure Single Sign-On
+
+
+                </h2>
+                <p style={{ color: "black" }}>
+                SSO Login means secure and simple authentication across your business. No extra passwords necessary.
+                </p>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* 7 */}
+      
+      <section className="our-commitment row-block"  style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }} >
+            <div className="cardDiv">
+                <div className=" wrap-col "  >
+                    <div className="col-fix-full dataSecurity" style={{minHeight:'477px', marginBottom:'2rem'}}>
+           
+                            <Image
+                                src={lockIcon}
+                                alt="lockIcon"
+                                sx={{marginBottom:'2rem'}}
+                                height={80} width={80}
+                                loading="lazy"
+                            />
+         
+                        <h2>Data Security</h2>
+                        <p >
+                        Our high privacy standards keep your data safe and secure.
+                        <br/>
+                        <span className="datasecurityspan">  SOC 2 compliance in progress.</span>
+                       
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section className="btn-wrap row-block" data-v-0a07a5aa>
+        <div className="container container-xs" data-v-0a07a5aa>
+          <div className="flex-justify-end" data-v-0a07a5aa>
+            <a href="#" className="btn-inline btn-type1" data-v-0a07a5aa>
+         SPEAK WITH US
+            </a>
+          
+          </div>
+        </div>
+      </section>
+        <section className="what-plan-to-pick row-block" data-v-0a07a5aa>
+        <div className="container container-xs" data-v-0a07a5aa>
+          <div className="full-card flex-align" data-v-0a07a5aa>
+            <h2 data-v-0a07a5aa className="text-black">
+Working Independently?
+            </h2>
+            <a href="#" data-v-0a07a5aa>
+              Explore mTap Pro 
+            </a>
+          </div>
+        </div>
       </section>
       <section className="btn-wrap row-block" data-v-0a07a5aa>
         <div className="container container-xs" data-v-0a07a5aa>
@@ -354,24 +504,13 @@ Remembering the context of your relationship and action items for each new conta
             <a href="#" className="btn-inline btn-type1" data-v-0a07a5aa>
               Explore all Features
             </a>
-            <a href="#" className="btn-inline btn-type2" data-v-0a07a5aa>
+            <a href="#" className="btn-inline btn-type2" data-v-0a07a5aa style={{backgroundColor:'#007bff',color:'white'}}>
               Start Free Trial
             </a>
           </div>
         </div>
       </section>
-      <section className="what-plan-to-pick row-block" data-v-0a07a5aa>
-        <div className="container container-xs" data-v-0a07a5aa>
-          <div className="full-card flex-align" data-v-0a07a5aa>
-            <h2 data-v-0a07a5aa className="text-black">
-              Have a Team?
-            </h2>
-            <a href="#" data-v-0a07a5aa>
-              Explore mTap Pro Teams
-            </a>
-          </div>
-        </div>
-      </section>
+     
       <section className="our-accordion row-block" data-v-0a07a5aa>
         <div className="container container-xs" data-v-0a07a5aa>
           <div className="accordion-wrap" data-v-0a07a5aa>
