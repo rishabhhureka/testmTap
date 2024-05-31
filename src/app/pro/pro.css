@@ -1,0 +1,25 @@
+@media screen and (max-width:767px) {
+.text-animated-block {
+    margin-top: 10rem;
+}
+.text-animated-block h1 {
+    margin-bottom: 4rem !important;
+}
+.business-pro-section{
+    margin-bottom: 10rem !important;
+}
+.card-inner{
+    height: auto !important;
+    margin-bottom: 4rem;
+}
+.card-wrap h2{
+    font-size: 45px;
+    margin-bottom: 2rem;
+}
+.overlap-group {
+    padding: 35px;
+}
+.overlap-group img{
+    width: 60%;
+}
+}

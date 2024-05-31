@@ -48,7 +48,7 @@ const Header = async() => {
             />
           </button>
           <li>
-            <Link href="/product" aria-current="page" className="nav-link">Product Page</Link>
+            <Link href="/product" aria-current="page" className="nav-link">Shop NFC</Link>
           </li>
           <li>
             <Link href="/pro" className="nav-link">Pro</Link>
@@ -56,9 +56,9 @@ const Header = async() => {
           <li>
             <Link href="/blog" className="nav-link">Blog</Link>
           </li>
-          {/* <li>
+          <li>
             <Link href="/teams" className="nav-link">For Teams</Link>
-          </li> */}
+          </li>
         </ul>
         {/* <ul className="auth-links">
         {user ? (
