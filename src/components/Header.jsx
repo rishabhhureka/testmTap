@@ -1,5 +1,5 @@
-
-import React from "react";
+'use client'
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import mtapLogo from "../Img/mtapLogo.png";
@@ -7,7 +7,13 @@ import menuIcon from "../Img/menu.png";
 import closeIcon from "../Img/close.png";
 // import { getSession, withPageAuthRequired } from '@auth0/nextjs-auth0';
 // import { renewToken } from '../utils/auth';
-const Header = async() => {
+const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
 // const Header = async() => {
   // const session = await getSession();
   // const user = session?.user;
@@ -38,13 +44,15 @@ const Header = async() => {
           <Image
            src={menuIcon}
             alt="Menu" 
+            onClick={toggleMenu}
           />
         </button>
-        <ul id="nav" className="nav-links">
+        <ul id="nav" className={`nav-links ${isMenuOpen ? "active" : ""}`}>
           <button className="close-button" aria-label="Close Button">
             <Image
               src={closeIcon}
               alt="Close" 
+              onClick={toggleMenu}
             />
           </button>
           <li>
@@ -52,6 +60,9 @@ const Header = async() => {
           </li>
           <li>
             <Link href="/pro" className="nav-link">Pro</Link>
+          </li>
+          <li>
+            <Link href="/subscriptions" className="nav-link">Subscriptions</Link>
           </li>
           <li>
             <Link href="/blog" className="nav-link">Blog</Link>

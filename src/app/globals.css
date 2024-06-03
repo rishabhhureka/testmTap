@@ -2271,7 +2271,7 @@ button.back-btn {
     nav ul.nav-links {
         background: #000;
         border-radius: 0;
-        display: none;
+        display: flex;
         font-size: 20px;
         height: 100%;
         margin: 0;
