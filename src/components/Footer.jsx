@@ -11,11 +11,11 @@ import appStore from "../Img/appStore.png"
 
 const Footer = () => (
   <footer>
-  <div className="row">
+  <div className="row" >
   <div className="column">
         <h3>Company</h3>
         <ul>
-          {["About Us", "Careers", "Press", "Blog"].map((item) => (
+          {["Shop", "Where To Tap", "Compatibility", "Events","Blog","Affiliate Program","Become a Retail Partner","Knowledge Base","Gallery"].map((item) => (
             <li key={item}>{item}</li>
           ))}
         </ul>
@@ -24,7 +24,7 @@ const Footer = () => (
       <div className="column">
         <h3>Products</h3>
         <ul>
-          {["Shop", "Pricing", "Features", "Integrations"].map((item) => (
+          {["Shop", "Where To Tap", "Compatibility", "Events","Blog","Affiliate Program","Become a Retail Partner","Knowledge Base","Gallery"].map((item) => (
             <li key={item}>{item}</li>
           ))}
         </ul>
@@ -33,7 +33,7 @@ const Footer = () => (
       <div className="column">
         <h3>Trust & Legal</h3>
         <ul>
-          {["Privacy Policy", "Terms of Service", "Compliance", "Security"].map((item) => (
+          {["Shop", "Where To Tap", "Compatibility", "Events","Blog","Affiliate Program","Become a Retail Partner","Knowledge Base","Gallery"].map((item) => (
             <li key={item}>{item}</li>
           ))}
         </ul>
@@ -42,7 +42,7 @@ const Footer = () => (
       <div className="column">
         <h3>Support</h3>
         <ul>
-          {["Help Center", "Contact Us", "FAQs", "System Status"].map((item) => (
+          {["Shop", "Where To Tap", "Compatibility", "Events","Blog","Affiliate Program","Become a Retail Partner","Knowledge Base","Gallery"].map((item) => (
             <li key={item}>{item}</li>
           ))}
         </ul>
