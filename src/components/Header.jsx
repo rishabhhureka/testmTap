@@ -59,11 +59,12 @@ const Header = () => {
             <Link href="/product" aria-current="page" className="nav-link">Shop NFC</Link>
           </li>
           <li>
-            <Link href="/pro" className="nav-link">Pro</Link>
-          </li>
-          <li>
             <Link href="/subscriptions" className="nav-link">Subscriptions</Link>
           </li>
+          <li>
+            <Link href="/pro" className="nav-link">Pro</Link>
+          </li>
+         
           <li>
             <Link href="/blog" className="nav-link">Blog</Link>
           </li>
