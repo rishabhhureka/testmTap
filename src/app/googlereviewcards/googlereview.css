@@ -1,0 +1,732 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap');
+
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+.root {
+  font-size: 1.3rem;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins';
+  background-color: rgba(7, 6, 49, 1) !important;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 10px;
+}
+
+.container section {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  min-height: 100vh;
+}
+
+.leftSide {
+  min-height: 600px;
+  width: 50%;
+  background: url("https://mtap.io/modules/custom/basic_react_pages/images/sect-1-bg.svg") no-repeat right center;
+  background-size: auto 1%;
+  position: relative;
+}
+
+.rightSide {
+  width: 50%;
+  padding: 0 0 0 5%;
+
+}
+
+section h2 {
+  font-size: 5.4rem;
+  line-height: 1.1em;
+  font-weight: 800;
+  text-transform: uppercase;
+  
+}
+section h2 strong {
+  color: #33ff00;
+}
+
+section h2 {
+  margin: 0;
+  font-family: 'Poppins';
+  color: #fff;
+}
+
+section > h2.text-center {
+  width: 100%;
+  text-align: center;
+margin: 2rem 0 1em;
+  color: #fff;
+}
+
+
+.cta a.lightredCta {
+  background: #ff6363;
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Poppins';
+  font-weight: 800;
+  padding: 8px 40px;
+  line-height: 1.5em;
+  border-radius: 30px;
+  display: inline-block;
+  margin: 10px 0 0;
+  font-size: 2.2rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.cta a.lightredCta:before {
+  width: 150%;
+  height: 100%;
+  transform: skewX(-20deg);
+  background: #e03535;
+  position: absolute;
+  left: -200%;
+  top: 0;
+  content: '';
+  z-index: -1;
+  transition: all 0.5s ease-in;
+}
+
+.cta a.lightredCta:hover:before {
+  left: 0;
+}
+
+.leftSide .card {
+  position: absolute;
+  bottom: -15%;
+  right: -4%;
+  top:90% ;
+  width: 230px;
+  height: 197px;
+
+}
+
+.leftSide .video {
+  position: absolute;
+  width: 70%;
+  border-radius: 30px;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: max-content;
+  left: 8%;  
+  right: 0;
+  padding: 1px;
+  background: #d9d9d9;
+  animation: videoframe 0.9s ease-in 0.8s 1 normal;
+  /* margin-top: 1px; */
+}
+
+.leftSide .video video {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  animation: videos 2s cubic-bezier(0.34, 0.43, 0, 1.1) 1.5s 1 normal forwards;
+  position: absolute;
+  left: -50vw;
+  right: -50vw;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.section1 {
+  margin: 3em 0 2em;
+}
+
+@keyframes videoframe {
+  0% {
+    top: 75%;
+    background-color: transparent;
+    box-shadow: 0 0 0 3px #d9d9d95d inset;
+  }
+
+  50% {
+    top: 10%;
+    background-color: transparent;
+  }
+
+  100% {
+    top: 0;
+    box-shadow: 0 0 0 0;
+    background-color: #d9d9d9
+  }
+}
+
+@keyframes videos {
+  from {
+    width: 80%;
+    height: 85%;
+    opacity: 0;
+  }
+
+  to {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    position: static;
+  }
+}
+
+.section1 .leftSide .card .cardImg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+}
+
+.section1 .leftSide .card .card1 {
+  opacity: 0;
+  animation: cards 2s cubic-bezier(0.97, 0.08, 0, 1) 2s 1 normal forwards;
+  width: 95%;
+}
+
+.section1 .leftSide .card .card2 {
+  opacity: 0;
+  top: 15px;
+  animation: cards 2.5s cubic-bezier(0.97, 0.08, 0, 1) 2.2s 1 normal forwards;
+  width: 95%;
+  left: 8%;
+}
+
+.section1 .leftSide .card .card3 {
+  opacity: 0;
+  top: -19px;
+  animation: cards 3s cubic-bezier(0.97, 0.08, 0, 1.08) 2.5s 1 normal forwards;
+  width: 95%;
+  left: -6%;
+}
+
+@keyframes cards {
+  0% {
+    transform: scale(1.8) translate(100px, -180px);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 0.9;
+  }
+
+  100% {
+    transform: scale(1) translate(0, 0px);
+    opacity: 1;
+  }
+}
+
+.section1 .leftSide {
+  animation: bganimation 1.2s ease-in-out 0s infinite alternate;
+}
+
+@keyframes bganimation {
+  from {
+    background-size: auto 95%;
+    background-position: 85% center;
+  }
+
+  to {
+    background-size: auto 100%;
+    background-position: right center;
+  }
+}
+
+.leftSide .mobileSlide {
+  position: absolute;
+  right: 55%;
+  top: -20px;
+  bottom: 0;
+  margin: auto;
+  height: 300px;
+  width: 626px;
+}
+
+.section2 .leftSide .card {
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 0;
+  right: -110px;
+  width: 360px;
+  height: 247px;
+}
+
+.section2 .leftSide {
+  background: url("https://mtap.io/modules/custom/basic_react_pages/images/sect-2-bg.svg") no-repeat right center;
+  background-size: auto 165%;
+  background-position: 31% center;
+  z-index: 1;
+}
+
+.section2 .leftSide:before {
+    width: 10px;
+    height: 10px;
+    content: '';
+    position: absolute;
+    z-index: -1;
+    right: 35%;
+    top: 0;
+    bottom: 0;
+    box-shadow: 0 0 210px 205px rgba(0, 255, 240, 0.19);
+    border-radius: 100px;
+    margin: auto;
+  }
+  
+  section img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  section h4 {
+    font-size: 2.9rem;
+    line-height: 1.2;
+    font-weight: 400;
+    margin: 0 0 0.5em;
+    font-family: 'Poppins';
+  }
+  
+  section h4 strong {
+    font-weight: 600;
+  }
+  
+  section h3 {
+    line-height: 1.3em;
+    font-size: 2.8rem;
+    margin: 0;
+    font-weight: 800;
+    font-family: 'Poppins';
+    color: #fff;
+  }
+  
+  .cardsBlks {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .cardsBlks .row {
+    width: 30.5%;
+    border: 4px solid;
+    border-radius: 30px;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px 20px;
+  }
+  
+  .cardsBlks .row h3.title {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 2rem;
+    line-height: 1em;
+    margin: 1em 0 20px;
+  }
+  
+  .cardsBlks span.helptext {
+    font-weight: 200;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+  }
+  
+  .pricecanceled {
+    font-weight: 800;
+    text-decoration: line-through;
+    color: rgba(255, 99, 99, 1);
+    font-size: 1.5rem;
+  }
+  
+  .offerPrice {
+    font-weight: 800;
+    font-size: 2.6rem;
+    line-height: 1.1em;
+  }
+  
+  .cardsCta a {
+    display: inline-block;
+    background: #fff;
+    text-decoration: none;
+    font-weight: 800;
+    padding: 1px 45px;
+    border-radius: 35px;
+    font-size: 1.4rem;
+    color: #000;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    overflow: hidden;
+    transition: all 0.2s ease-in;
+  }
+  
+  .cardsCta a:hover {
+    transform: scale(1.1);
+  }
+  
+  .cardsCta {
+    display: block;
+    padding: 10px 0;
+  }
+  
+  .cardsBlks .row.row2 {
+    border-color: #33fe00;
+  }
+  
+  .cardsBlks .row.row3 {
+    border-color: #fe00d5;
+  }
+  
+  .cardsBlks .row.row3 .cardsCta a {
+    background: #fe00d5;
+  }
+  
+  .cardsBlks .row.row2 .cardsCta a {
+    background: #33fd00;
+  }
+  
+  .pageBottom {
+    background: #fff;
+    margin: 0 0 0em;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .section3 {
+    padding: 0 0 4em;
+  }
+  
+  .sectionClients {
+    max-width: 100%;
+    margin: auto;
+    padding: 0 0 2.5em;
+    display: block;
+  }
+  
+  .sectionClients > h2 {
+    color: #070631;
+    text-align: center;
+    margin: 0.8em 0;
+    font-family: 'Poppins';
+    text-transform: uppercase;
+  }
+  
+  .clientsBlks {
+    display: flex;
+    width: 100%;
+  }
+  
+  .clientsBlks .row {
+    width: 30%;
+    margin: 0 2%;
+    background: #070631;
+    padding: 3em 20px 3em;
+    font-size: 18px;
+    line-height: 1.5em;
+  }
+  
+  .clientsBlks .row .content {
+    display: inline-block;
+    padding: 0 0 20px;
+  }
+  
+  .clientsBlks .row .authInfo {
+    font-weight: 500;
+  }
+  
+  .container h1 {
+    text-align: center;
+    font-size: 80px;
+    line-height: 1.1em;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-family: 'Poppins';
+    max-width: 90vw;
+    margin: 0.3em auto 2.2em;
+  }
+  
+  .section1 h2 {
+    font-size: 5.4rem;
+  }
+  
+  .container h1 span {
+    font-weight: 500;
+  }
+  
+  @media all and (max-width: 767px) {}
+  
+  @media only screen and (min-width: 451px) and (max-width: 767px) {}
+  
+  @media all and (max-width: 450px) {}
+  
+  @media screen and (max-width: 1080px) {
+    .leftSide {
+      min-height: 350px;
+    }
+  
+    .leftSide .video {
+      width: 217px;
+      left: 0;
+    }
+  
+    .leftSide {
+      background-position: center;
+    }
+  
+    .container {
+      max-width: 768px;
+    }
+  
+    section h2,
+    section h2,
+    .container h1 {
+      font-size: 2.7rem;
+    }
+  
+    section h4 {
+      font-size: 2rem;
+    }
+  
+    section h3 {
+      font-size: 2.1rem;
+    }
+  
+    .leftSide .mobileSlide {
+      right: 61%;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      height: 240px;
+      width: 476px;
+    }
+  
+    .section2 .leftSide .card {
+      width: 250px;
+      left: 0;
+      right: 0;
+      height: 180px;
+    }
+  
+    .cardsBlks .row {
+      width: 32%;
+      padding: 0 10px 10px;
+    }
+  
+    .cardsBlks .row h3.title {
+      font-size: 1.4rem;
+    }
+  
+    .cardsBlks span.helptext {
+      line-height: 1.2em;
+      font-size: 0.8rem;
+    }
+  
+    .sectionClients {
+      max-width: 768px;
+    }
+  
+    .clientsBlks .row {
+      margin: 0 5px;
+      width: 33%;
+    }
+  
+    .section1 h2 {
+      font-size: 2.6rem;
+    }
+  
+    .section1 .leftSide {
+      animation: bganimation1 1.2s ease-in-out 0s infinite alternate;
+    }
+  
+    @keyframes bganimation1 {
+      from {
+        background-size: auto 95%;
+        background-position: center center;
+      }
+  
+      to {
+        background-size: auto 100%;
+        background-position: center center;
+      }
+    }
+  
+    .section1 .leftSide .card {
+      bottom: -26%;
+      width: 200px;
+    }
+  
+  }
+  
+  @media screen and (max-width: 767px) {
+    .container {
+      width: 550px;
+      max-width: 100%;
+    }
+  
+    .leftSide {
+      width: 100%;
+    }
+  
+    .rightSide {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+      }
+    
+      .section {
+        position: relative;
+        z-index: 1;
+        margin: 0 0 2em;
+      }
+    
+      .section1 .rightSide {
+        padding: 4em 0 0;
+        text-align: center;
+      }
+    
+      .section:before {
+        content: '';
+        width: 100vw;
+        left: -50vw;
+        right: -50vw;
+        position: absolute;
+        height: 1px;
+        background: #fff;
+        bottom: -3em;
+        margin: auto;
+        opacity: 0.2;
+      }
+    
+      .section3 {
+        padding: 0 0 0em;
+      }
+    
+      .section2 .rightSide {
+        max-width: 380px;
+        margin: auto;
+        padding: 2em 0 0;
+      }
+    
+      .cardsBlks {
+        flex-wrap: wrap;
+        max-width: 330px;
+        margin: auto;
+      }
+    
+      .cardsBlks .row {
+        width: 100%;
+        margin: 0 0 1.5em;
+      }
+    
+      .sectionClients {
+        max-width: 500px;
+        padding: 0 0 1.5em;
+      }
+    
+      .clientsBlks {
+        flex-wrap: wrap;
+      }
+    
+      .clientsBlks .row {
+        width: 100%;
+        margin: 0 0 17px;
+        padding: 2em 9% 2em;
+      }
+    
+      .pageBottom {
+        margin: 0 0 0em;
+      }
+    
+      .section1 .leftSide .card {
+        bottom: -25%;
+        width: 200px;
+        right: 16%;
+      }
+    }
+    
+    @media screen and (max-width: 550px) {
+      .leftSide {
+        height: 55vh;
+        min-height: auto;
+        max-height: calc(100vw / 1.3);
+        background-size: 85% auto;
+      }
+    
+      .leftSide .video {
+        width: 50%;
+      }
+    
+      .leftSide .card {
+        width: 46%;
+      }
+    
+      .section1 {
+        margin: 1em 0 2em;
+      }
+    
+      section h2,
+      section h2,
+      .container h1 {
+        font-size: 2.3rem;
+      }
+    
+      .section2 .leftSide {
+        background-size: 130% auto;
+      }
+    
+      .section1 .rightSide {
+        padding: 5em 0 0;
+      }
+    
+      .section2 .leftSide .card {
+        width: 50%;
+        height: calc(60vw / 1.75);
+      }
+    
+      .leftSide .mobileSlide {
+        width: 87vw;
+        height: calc(75vw / 1.65);
+      }
+    
+      section h4 {
+        font-size: 1.7rem;
+      }
+    
+      section h3 {
+        font-size: 1.7rem;
+      }
+    
+      .section1 h2 {
+        font-size: 2rem;
+        margin-top: 4rem;
+      }
+    
+      .section1 .leftSide .card {
+        bottom: -26%;
+        width: 32%;
+        height: calc(100% / 2);
+      }
+    }
+    
+    @media screen and (max-width: 400px) {
+      .sectionClients > h2 {
+        max-width: 325px;
+        margin: 0.8em auto
+      }
+    }
+    
+    .siteBreadcrumbs {
+      display: none;
+    }
