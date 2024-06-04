@@ -1,0 +1,13 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ubuntu/app/mtap-nextjs
+    overwrite: true
+
+hooks:
+  AfterInstall:
+    - location: scripts/check_and_start_app.sh
+      timeout: 300
+      runas: root
+
