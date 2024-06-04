@@ -5,15 +5,24 @@ import Image from "next/image";
 import mtapLogo from "../Img/mtapLogo.png";
 import menuIcon from "../Img/menu.png";
 import closeIcon from "../Img/close.png";
+import { Menu, MenuItem, Button } from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
 // import { getSession, withPageAuthRequired } from '@auth0/nextjs-auth0';
 // import { renewToken } from '../utils/auth';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const [anchorEl, setAnchorEl] = useState(null);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
 
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 // const Header = async() => {
   // const session = await getSession();
   // const user = session?.user;
@@ -58,19 +67,34 @@ const Header = () => {
           <li>
             <Link href="/product" aria-current="page" className="nav-link">Shop NFC</Link>
           </li>
+       
           <li>
             <Link href="/subscriptions" className="nav-link">Subscriptions</Link>
           </li>
           <li>
             <Link href="/pro" className="nav-link">Pro</Link>
           </li>
-         
+          <li className="dropdown" >
+      <a className="nav-link" >Solutions</a>
+      <ul className="dropdown-content">
+        <li className="menu-item">
+        <Link href="/googlereviewcards" style={{  marginTop: "2rem"}}>Google Review Cards</Link>
+       
+        </li>
+     <li className="menu-item">
+     <Link href="/gift">Gift</Link>
+     </li>
+       
+      
+      </ul>
+    </li>
           <li>
             <Link href="/blog" className="nav-link">Blog</Link>
           </li>
           <li>
             <Link href="/teams" className="nav-link">For Teams</Link>
           </li>
+         
         </ul>
         {/* <ul className="auth-links">
         {user ? (
