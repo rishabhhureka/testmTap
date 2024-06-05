@@ -3,8 +3,8 @@ import React, { Suspense } from 'react';
 import { Inter } from "next/font/google";
 import "./globals.css"
 import Header from '../components/Header';
-import { Provider } from 'react-redux';
-import store from '../redux/store';
+// import { Provider } from 'react-redux';
+// import store from '../redux/store';
 // import { UserProvider } from '@auth0/nextjs-auth0/client';
 const inter = Inter({ subsets: ["latin"] });
 const Footer = React.lazy(() => import('../components/Footer'));
@@ -44,13 +44,13 @@ export default function RootLayout({ children }) {
       </head>
       {/* <UserProvider> */}
       <body className={inter.className}>
-      <Provider store={store}>
+      {/* <Provider store={store}> */}
         <Header />
         {children}
         <Suspense fallback={<div>Loading...</div>}>
         <Footer />
       </Suspense>
-      </Provider>
+      {/* </Provider> */}
       </body>
       {/* </UserProvider> */}
     </html>
