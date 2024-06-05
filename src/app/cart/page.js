@@ -120,14 +120,14 @@ const Cart = () => {
       </Box>
       <Grid container spacing={2} sx={{ marginTop: 2 ,display:'flex',justifyContent:'end'}}>
         <Grid item>
-          <Button variant="contained"  sx={{padding:'1rem',width:'10vw',backgroundColor:'#0077b6',color:'white',fontSize:"20px",fontWeight:'600',"@media (max-width: 767px)": {
+          <Button variant="contained"  sx={{padding:'1rem',width:'18vw',backgroundColor:'#0077b6',color:'white',fontSize:"20px",fontWeight:'600',"@media (max-width: 767px)": {
                  width:"50vw"
                       }}}>
             UPDATE CART
           </Button>
         </Grid>
         <Grid item>
-          <Button variant="contained"  sx={{padding:'1rem',width:'10vw',backgroundColor:'#00b4d8',color:'white',fontSize:"20px",fontWeight:'600',"@media (max-width: 767px)": {
+          <Button variant="contained"  sx={{padding:'1rem',width:'18vw',backgroundColor:'#00b4d8',color:'white',fontSize:"20px",fontWeight:'600',"@media (max-width: 767px)": {
                     width:"50vw"
                       }}}>
             CHECKOUT
