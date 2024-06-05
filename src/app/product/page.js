@@ -25,6 +25,7 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import Link from 'next/link';
 const images = [
   { src: googleReviewButton, alt: 'Image 1' },
   { src: qrCode, alt: 'Image 2' },
@@ -105,7 +106,9 @@ const Product = () => {
   };
 
   const handleDecrement = () => {
-    setCount(count - 1);
+    if (count > 0) {
+      setCount(count - 1);
+    }
   };
 
   
@@ -382,9 +385,10 @@ const Product = () => {
           </Grid>
         </Grid>
         </CardContent>
+        <Link href="/cart">
         <Button
         className='AddToCartButton'
-         
+        
           sx={{
             '--variant-borderWidth': '2px',
             borderRadius: 10,
@@ -397,6 +401,7 @@ const Product = () => {
         >
          ADD TO CART
         </Button>
+        </Link>
       </CardContent>
       </Card>
       <Box sx={{display: 'flex',

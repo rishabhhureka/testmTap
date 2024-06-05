@@ -1,21 +1,21 @@
+'use client'
 import React, { Suspense } from 'react';
 import { Inter } from "next/font/google";
 import "./globals.css"
 import Header from '../components/Header';
+import { Provider } from 'react-redux';
+import store from '../redux/store';
 // import { UserProvider } from '@auth0/nextjs-auth0/client';
 const inter = Inter({ subsets: ["latin"] });
 const Footer = React.lazy(() => import('../components/Footer'));
-export const metadata = {
-  title: "mTap",
-  description: "Digital business cards by mTap allow you to instantly share contact info, social media & more with just a tap. Create your digital business card for free today.",
-};
+
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
+        <title>mTap</title>
+        <meta name="description" content="Digital business cards by mTap allow you to instantly share contact info, social media & more with just a tap. Create your digital business card for free today" />
         <link rel="canonical" href="https://mtap.byklabs.store/" />
         <link rel="icon"  href="/mtaplogoWeb.png"  />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -44,11 +44,13 @@ export default function RootLayout({ children }) {
       </head>
       {/* <UserProvider> */}
       <body className={inter.className}>
+      <Provider store={store}>
         <Header />
         {children}
         <Suspense fallback={<div>Loading...</div>}>
         <Footer />
       </Suspense>
+      </Provider>
       </body>
       {/* </UserProvider> */}
     </html>
