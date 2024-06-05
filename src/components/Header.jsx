@@ -6,7 +6,7 @@ import mtapLogo from "../Img/mtapLogo.png";
 import menuIcon from "../Img/menu.png";
 import closeIcon from "../Img/close.png";
 import { Menu, MenuItem, Button } from '@mui/material';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 // import { getSession, withPageAuthRequired } from '@auth0/nextjs-auth0';
 // import { renewToken } from '../utils/auth';
@@ -74,6 +74,9 @@ const Header = () => {
           <li>
             <Link href="/pro" className="nav-link">Pro</Link>
           </li>
+          <li>
+            <Link href="/teams" className="nav-link">For Teams</Link>
+          </li>
           <li className="dropdown" >
       <a className="nav-link" >Solutions</a>
       <ul className="dropdown-content">
@@ -91,9 +94,9 @@ const Header = () => {
           <li>
             <Link href="/blog" className="nav-link">Blog</Link>
           </li>
-          <li>
-            <Link href="/teams" className="nav-link">For Teams</Link>
-          </li>
+          {/* <li>
+            <Link href="/cart" className="nav-link"> <ShoppingCartOutlinedIcon sx={{fontSize:30}} /></Link>
+          </li> */}
          
         </ul>
         {/* <ul className="auth-links">
