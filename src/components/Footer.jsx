@@ -8,6 +8,7 @@ import instagramIcon from "../Img/instagram.png"
 import tiktokIcon from "../Img/tiktok.png"
 import mtapLogo from "../Img/mtapLogo.png"
 import appStore from "../Img/appStore.png"
+import Link from "next/link";
 
 const Footer = () => (
   <footer>
@@ -15,36 +16,63 @@ const Footer = () => (
   <div className="column">
         <h3>Company</h3>
         <ul>
-          {["Shop", "Where To Tap", "Compatibility", "Events","Blog","Affiliate Program","Become a Retail Partner","Knowledge Base","Gallery"].map((item) => (
-            <li key={item}>{item}</li>
-          ))}
+        <ul>
+  <li key="Shop"><Link href="/product" style={{ textDecoration: 'none', color: 'inherit' }}>Shop</Link></li>
+  <li key="Where To Tap"><Link href="/where-to-tap" style={{ textDecoration: 'none', color: 'inherit' }}>Where To Tap</Link></li>
+  <li key="Compatibility"><Link href="/compatibility" style={{ textDecoration: 'none', color: 'inherit' }}>Compatibility</Link></li>
+  <li key="Events"><Link href="/events" style={{ textDecoration: 'none', color: 'inherit' }}>Events</Link></li>
+  <li key="Blog"><Link href="/blog" style={{ textDecoration: 'none', color: 'inherit' }}>Blog</Link></li>
+  <li key="Affiliate Program"><Link href="/affiliate-program" style={{ textDecoration: 'none', color: 'inherit' }}>Affiliate Program</Link></li>
+  <li key="Become a Retail Partner"><Link href="/become-a-retail-partner" style={{ textDecoration: 'none', color: 'inherit' }}>Become a Retail Partner</Link></li>
+  <li key="Knowledge Base"><Link href="/knowledge-base" style={{ textDecoration: 'none', color: 'inherit' }}>Knowledge Base</Link></li>
+  <li key="Gallery"><Link href="/gallery" style={{ textDecoration: 'none', color: 'inherit' }}>Gallery</Link></li>
+</ul>
+
         </ul>
       </div>
       {/* Products Section */}
       <div className="column">
         <h3>Products</h3>
         <ul>
-          {["Shop", "Where To Tap", "Compatibility", "Events","Blog","Affiliate Program","Become a Retail Partner","Knowledge Base","Gallery"].map((item) => (
-            <li key={item}>{item}</li>
-          ))}
+        <li key="Shop"><Link href="/product" style={{ textDecoration: 'none', color: 'inherit' }}>Shop</Link></li>
+  <li key="Where To Tap"><Link href="/where-to-tap" style={{ textDecoration: 'none', color: 'inherit' }}>Where To Tap</Link></li>
+  <li key="Compatibility"><Link href="/compatibility" style={{ textDecoration: 'none', color: 'inherit' }}>Compatibility</Link></li>
+  <li key="Events"><Link href="/events" style={{ textDecoration: 'none', color: 'inherit' }}>Events</Link></li>
+  <li key="Blog"><Link href="/blog" style={{ textDecoration: 'none', color: 'inherit' }}>Blog</Link></li>
+  <li key="Affiliate Program"><Link href="/affiliate-program" style={{ textDecoration: 'none', color: 'inherit' }}>Affiliate Program</Link></li>
+  <li key="Become a Retail Partner"><Link href="/become-a-retail-partner" style={{ textDecoration: 'none', color: 'inherit' }}>Become a Retail Partner</Link></li>
+  <li key="Knowledge Base"><Link href="/knowledge-base" style={{ textDecoration: 'none', color: 'inherit' }}>Knowledge Base</Link></li>
+  <li key="Gallery"><Link href="/gallery" style={{ textDecoration: 'none', color: 'inherit' }}>Gallery</Link></li>
         </ul>
       </div>
       {/* Trust & Legal Section */}
       <div className="column">
         <h3>Trust & Legal</h3>
         <ul>
-          {["Shop", "Where To Tap", "Compatibility", "Events","Blog","Affiliate Program","Become a Retail Partner","Knowledge Base","Gallery"].map((item) => (
-            <li key={item}>{item}</li>
-          ))}
+        <li key="Shop"><Link href="/product" style={{ textDecoration: 'none', color: 'inherit' }}>Shop</Link></li>
+  <li key="Where To Tap"><Link href="/where-to-tap" style={{ textDecoration: 'none', color: 'inherit' }}>Where To Tap</Link></li>
+  <li key="Compatibility"><Link href="/compatibility" style={{ textDecoration: 'none', color: 'inherit' }}>Compatibility</Link></li>
+  <li key="Events"><Link href="/events" style={{ textDecoration: 'none', color: 'inherit' }}>Events</Link></li>
+  <li key="Blog"><Link href="/blog" style={{ textDecoration: 'none', color: 'inherit' }}>Blog</Link></li>
+  <li key="Affiliate Program"><Link href="/affiliate-program" style={{ textDecoration: 'none', color: 'inherit' }}>Affiliate Program</Link></li>
+  <li key="Become a Retail Partner"><Link href="/become-a-retail-partner" style={{ textDecoration: 'none', color: 'inherit' }}>Become a Retail Partner</Link></li>
+  <li key="Knowledge Base"><Link href="/knowledge-base" style={{ textDecoration: 'none', color: 'inherit' }}>Knowledge Base</Link></li>
+  <li key="Gallery"><Link href="/gallery" style={{ textDecoration: 'none', color: 'inherit' }}>Gallery</Link></li>
         </ul>
       </div>
       {/* Support Section */}
       <div className="column">
         <h3>Support</h3>
         <ul>
-          {["Shop", "Where To Tap", "Compatibility", "Events","Blog","Affiliate Program","Become a Retail Partner","Knowledge Base","Gallery"].map((item) => (
-            <li key={item}>{item}</li>
-          ))}
+        <li key="Shop"><Link href="/product" style={{ textDecoration: 'none', color: 'inherit' }}>Shop</Link></li>
+  <li key="Where To Tap"><Link href="/where-to-tap" style={{ textDecoration: 'none', color: 'inherit' }}>Where To Tap</Link></li>
+  <li key="Compatibility"><Link href="/compatibility" style={{ textDecoration: 'none', color: 'inherit' }}>Compatibility</Link></li>
+  <li key="Events"><Link href="/events" style={{ textDecoration: 'none', color: 'inherit' }}>Events</Link></li>
+  <li key="Blog"><Link href="/blog" style={{ textDecoration: 'none', color: 'inherit' }}>Blog</Link></li>
+  <li key="Affiliate Program"><Link href="/affiliate-program" style={{ textDecoration: 'none', color: 'inherit' }}>Affiliate Program</Link></li>
+  <li key="Become a Retail Partner"><Link href="/become-a-retail-partner" style={{ textDecoration: 'none', color: 'inherit' }}>Become a Retail Partner</Link></li>
+  <li key="Knowledge Base"><Link href="/knowledge-base" style={{ textDecoration: 'none', color: 'inherit' }}>Knowledge Base</Link></li>
+  <li key="Gallery"><Link href="/gallery" style={{ textDecoration: 'none', color: 'inherit' }}>Gallery</Link></li>
         </ul>
       </div>
     </div>
