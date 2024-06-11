@@ -315,7 +315,10 @@ export default function EventDetails() {
                       >
                         {event.date}
                       </p>
-                      <h3 className="teamstitle">{event.title}</h3>
+                      <h3 className="teamstitle"  style={{
+                         
+                          color: "black",
+                        }}>{event.title}</h3>
                       <p style={{ fontSize: "20px", color: "black" }}>
                         {event.description}
                       </p>
