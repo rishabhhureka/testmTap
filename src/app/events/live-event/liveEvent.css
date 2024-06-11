@@ -2,7 +2,7 @@
     /* position: relative; */
     max-height: 120vh;
     overflow: hidden;
-    margin-bottom: 15rem !important;
+    margin-bottom: 10rem !important;
   }
   
   .star-background {
@@ -436,11 +436,11 @@ border-radius: 40px;
 }
 .image2{
     width:360 !important;
-    height:560px !important ;
+    height:550px !important ;
 }
 .image3{
     width:600px !important;
-    height:560px !important ;
+    height:550px !important ;
 }
 .image4{
     width:600px !important;
