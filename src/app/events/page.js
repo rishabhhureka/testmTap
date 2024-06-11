@@ -3,6 +3,7 @@ import liveEvent from "../../Img/liveEvent.jpg"
 import EventsPage from "../../Img/eventsBackground.jpg";
 import EventsImage from "../../Img/eventImage.jpg"
 import "./events.css";
+import Link from "next/link";
 
 export default function Events() {
   return (
@@ -135,44 +136,49 @@ export default function Events() {
         <div className="teamsicon-container">
           <Image src={liveEvent} alt="Icon" className="teamsicon" loading="lazy" width={1300} height={1300} />
         </div>
-        <div>
-        <h3 className="teamstitle">Exciting Event Ahead!</h3>
-        <p style={{marginBottom:'0.5rem',fontSize:'20px'}}>26 May 2024</p>
-        <p style={{fontSize:'20px'}}>Join Us for an unforgettable experience at the HYPER mTap event. Get ready to netowk like never before!</p>
-        </div>
+          <Link href="/events/eventdetails" className="linkTag">
+          <div>
+          <h3 className="teamstitle">Exciting Event Ahead!</h3>
+          <p style={{marginBottom:'0.5rem',fontSize:'20px',color:'white'}}>26 May 2024</p>
+          <p style={{fontSize:'20px',color:'white'}}>Join Us for an unforgettable experience at the HYPER mTap event. Get ready to netowk like never before!</p>
+          </div>
+          </Link>
       </div>
 
       <div className="teamscard">
         <div className="teamsicon-container">
           <Image src={liveEvent} alt="Icon" className="teamsicon" loading="lazy" />
         </div>
+        <Link href="/events/eventdetails" className="linkTag">
         <div>
         <h3 className="teamstitle">Exciting Event Ahead!</h3>
         <p style={{marginBottom:'0.5rem',fontSize:'20px'}}>26 May 2024</p>
         <p style={{fontSize:'20px'}}>Join Us for an unforgettable experience at the HYPER mTap event. Get ready to netowk like never before!</p>
-        </div>
+        </div> </Link>
       </div>
 
       <div className="teamscard">
         <div className="teamsicon-container">
           <Image src={liveEvent} alt="Icon" className="teamsicon" loading="lazy" />
         </div>
+        <Link href="/events/eventdetails" className="linkTag">
         <div>
         <h3 className="teamstitle">Exciting Event Ahead!</h3>
         <p style={{marginBottom:'0.5rem',fontSize:'20px'}}>26 May 2024</p>
         <p style={{fontSize:'20px'}}>Join Us for an unforgettable experience at the HYPER mTap event. Get ready to netowk like never before!</p>
-        </div>
+        </div> </Link>
       </div>
 
       <div className="teamscard">
         <div className="teamsicon-container">
           <Image src={liveEvent} alt="Icon" className="teamsicon" loading="lazy" />
         </div>
+        <Link href="/events/eventdetails" className="linkTag">
         <div>
         <h3 className="teamstitle">Exciting Event Ahead!</h3>
         <p style={{marginBottom:'0.5rem',fontSize:'20px'}}>26 May 2024</p>
         <p style={{fontSize:'20px'}}>Join Us for an unforgettable experience at the HYPER mTap event. Get ready to netowk like never before!</p>
-        </div>
+        </div> </Link>
       </div>
     </div>
   </div>
