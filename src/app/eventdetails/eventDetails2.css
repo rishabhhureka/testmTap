@@ -1,0 +1,652 @@
+.business-pro-section {
+
+    max-height: 120vh;
+    overflow: hidden;
+    margin-bottom: 30rem !important;
+  }
+  
+  .star-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+
+  }
+.text-animated-block{
+    margin: 0 !important;
+    text-align: start !important;
+    padding: 0 !important;
+}
+.container{
+    margin: 0 !important;
+}
+
+  .text-animated-block h1 {
+   
+    -webkit-text-fill-color: #ffffffff;
+}
+
+  .text-animated-block h1{
+    margin-top: 10rem;
+margin-bottom: 2rem;
+font-size: 120px !important;
+line-height: 190px;
+  }
+  .text-animated-block h2 {
+    margin-bottom: 4rem;
+      }
+  .text-animated-block h5{
+    margin-bottom: 3rem;
+    font-size: 40px !important;
+  }
+  .text-animated-block p {
+    font-size:34px !important;
+    font-weight: 200 !important;
+    margin-bottom: 1rem !important; 
+    text-align: start !important;
+  }
+  
+  .btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+  
+  .explore-btn,
+  .trial-btn {
+    padding: 1.8rem 1.6rem;
+    font-size: 25px;
+    
+    width: 50%;
+    font-weight: bolder;
+    cursor: pointer;
+    border-radius: 40px;
+  }
+  
+  .explore-btn {
+    background-color: #fff;
+    color: #333;
+
+  }
+  
+  .trial-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+   
+  }
+  .linkTag{
+    text-decoration: none;
+  }
+
+  .recentEvents{
+    border: 1px solid transparent;
+    border-radius: 94px;
+background: var(--ffffff, #FFF);
+min-height: 1911px;
+flex-shrink: 0;
+display: flex;
+padding: 4rem;
+flex-direction: column;
+}
+.imageGallery{
+    border: 1px solid transparent;
+    border-radius: 94px;
+background: var(--ffffff, #fce93b);
+min-height: 200vh;
+margin-bottom: 2rem;
+}
+.imageHeading h2{
+  margin-top: 2rem;
+      color: #000 !important;
+      text-align: center;
+      font-size: 86px !important;
+      font-style: normal;
+      font-weight: 700 !important;
+      line-height: 105%;
+      margin-bottom: 4rem !important;
+      margin-right: 2rem !important;
+}
+.imageGrid img{
+height: 80vh !important;
+border-radius: 90px;
+padding: 2rem;
+}
+.allEvents{
+    display: flex;
+    padding: 4rem;  
+ 
+}
+.allEventsText{
+    margin-left: 5rem;
+    margin-top: .5rem;
+}
+  .teamsHeading h2{
+    margin-top: 2rem;
+      color: #000 !important;
+      text-align: center;
+      font-size: 86px !important;
+      font-style: normal;
+      font-weight: 700 !important;
+      line-height: 105%;
+      margin-bottom: 0 !important;
+      margin-right: 2rem !important;
+
+  }
+.teamscontainer {
+
+  margin: 0 auto;
+  padding: 2rem;
+  
+}
+
+.teamscard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr)) !important;
+  grid-gap: 2rem;
+}
+
+.teamscard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem !important;
+  border: 1px solid transparent;
+  border-radius: 30px;
+}
+
+.teamsicon-container {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.teamsicon {
+
+width: 360px !important;
+height: 460px !important;
+flex-shrink: 0;
+  /* min-width: 30vw !important; 
+height: 50vh !important; */
+border-radius: 30px;
+}
+
+.teamstitle {
+  font-size:32px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: start;
+  color: #000 !important;
+}
+
+
+/* public/events.css */
+
+
+.imageContainer{
+  display: grid;
+  grid-template-columns: repeat(4, minmax(350px, 1fr));
+  gap: 1rem;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 8rem;
+}
+@media screen and (max-width:767px) {
+  .teamscard-grid {
+    grid-template-columns: repeat(1, minmax(250px, 1fr)) !important;
+    grid-gap: 15rem;
+}
+.business-pro-section {
+  margin-bottom: 14rem;
+}
+.recentEvents{
+    display: block !important;
+}
+.text-animated-block{
+padding: 50px 0;
+margin-bottom: 12rem;
+margin-top: 8rem;
+}
+.text-animated-block h1{
+  font-size: 65px;
+  line-height: 100px;
+}
+.text-animated-block h2{
+  font-size: 100px;
+  margin-bottom: 2rem;
+}
+.text-animated-block h5{
+  font-size: 36px;
+  margin-bottom: 2rem;
+}
+.text-animated-block p{
+  font-size: 28px;
+}
+.midHeadDiv1{
+  padding: 1.5rem !important;
+}
+.midHead{
+  display: block !important;
+}
+.midHead h3{
+  font-size: 35px !important;
+  line-height: 45px !important;
+  margin-bottom: 2rem;
+}
+.midHead h6{
+  font-size: 25px !important;
+  margin-bottom: 2rem;
+}
+.endHead{
+  flex-direction: column;
+}
+.endHead1{
+  margin-right: 0px !important;
+  text-align: center;
+}
+.endHead1 h2{
+ font-size: 50px !important;
+
+}
+.card_content{
+  margin: 2rem;
+}
+.overlay{
+  width: 80%;
+}
+.overlay h3{
+  font-size: 50px !important;
+}
+.overlay p{
+  font-size: 20px !important;
+}
+.imageContainer{
+  grid-template-columns: repeat(1, minmax(350px, 1fr));
+}
+.explore-btn, .trial-btn {
+  padding: 1rem 1.6rem;
+  font-size: 20px;
+  width: 50%;
+  font-weight: bolder;
+  cursor: pointer;
+  border-radius: 40px;
+}
+.teamsHeading h2{
+  font-size: 47px;
+margin-bottom: 12rem !important;
+}
+.teamscontainer{
+  max-width: 95%;
+}
+.teamscard{
+  padding: 2rem;
+}
+.teamsicon-container{
+  width: 60px;
+  height: 60px;
+}
+.teamsicon{
+  min-width: 100vw !important;
+}
+.teamstitle{
+  font-size: 26px;
+  margin-top: 15rem;
+}
+.video1{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.section1{
+  padding: 2rem !important;
+}
+.section1 img{
+ width: 250px;
+ height: 250px;
+
+}
+.card-inner .text-wrp h2{
+  display: flex;
+  text-align: center;
+  font-size: 35px;
+  width: 100vw;
+}
+.wrap-col{
+padding: 2rem;
+}
+.col-fix-full{
+  border-radius: 70px;
+}
+.full-card.flex-align {
+  padding: 30px;
+  display: block;
+}
+.full-card.flex-align h2{
+  font-size: 30px;
+  margin-bottom: 1rem;
+}
+.flex-justify-end, .flex-justify-end a{
+  margin-bottom: 20px;
+}
+}.business-pro-section {
+    /* position: relative; */
+    max-height: 120vh;
+    overflow: hidden;
+    margin-bottom: 10rem;
+  }
+  
+  .star-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    /* margin-bottom: -6rem; */
+  }
+
+
+  .text-animated-block h1 {
+   
+    -webkit-text-fill-color: #ffffffff;
+}
+
+  .text-animated-block h1{
+    margin-top: 10rem;
+margin-bottom: 2rem;
+font-size: 200px;
+line-height: 190px;
+  }
+  .text-animated-block h2 {
+    margin-bottom: 4rem;
+      }
+  .text-animated-block h5{
+    margin-bottom: 3rem;
+    font-size: 4rem;
+  }
+  .text-animated-block p {
+    font-size:35px;
+    font-weight: 600;
+    margin-bottom: 4rem;
+  }
+  
+  .btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+  
+  .explore-btn,
+  .trial-btn {
+    padding: 1.8rem 1.6rem;
+    font-size: 25px;
+    
+    width: 50%;
+    font-weight: bolder;
+    cursor: pointer;
+    border-radius: 40px;
+  }
+  
+  .explore-btn {
+    background-color: #fff;
+    color: #333;
+
+  }
+  
+  .trial-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+   
+  }
+  /* styles/Home.css */
+  .teamsHeading h2{
+      color: #fff;
+      text-align: center;
+      font-size: 96px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: 105%;
+      margin-bottom: 25px;
+
+  }
+.teamscontainer {
+
+  margin: 0 auto;
+  padding: 2rem;
+  
+}
+
+.teamscard-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(250px, 1fr));
+  grid-gap: 2rem;
+}
+
+.teamscard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+  border: 1px solid transparent;
+  border-radius: 30px;
+}
+
+.teamsicon-container {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.teamsicon {
+  min-width: 30vw; 
+height: 50vh;
+border-radius: 30px;
+}
+
+.teamstitle {
+  font-size:32px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: start;
+  color: #000 !important;
+}
+.video1{
+  border-radius: 30px;
+  
+   margin-bottom: 4rem;
+   width: 100%;
+   max-height: 80vh;
+ }
+
+/* public/events.css */
+
+.banner  {
+  position: relative;
+  background-image: url('https://res.cloudinary.com/daksptvru/image/upload/v1718019501/Rectangle_9_1_meljhn.jpg'); /* Update the path to your image */
+  background-size: cover;
+  background-position: center;
+  height: 70vh; /* Adjust the height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin-bottom: 4rem;
+  border-radius: 80px;
+  
+}
+
+.overlay {
+  background-color:white; /* Semi-transparent black overlay */
+  padding: 20px;
+  min-height: 50vh;
+  color: #000;
+  border-radius: 50px;
+  /* width: 80vw; */
+  text-align: start;
+  overflow: auto;
+ 
+
+}
+.overlay h3{
+  font-size: 60px;
+  font-weight: 700;
+margin: 2rem;
+}
+
+
+.overlay p {
+  font-size: 30px;
+  margin: 2rem;
+}
+.imageContainer{
+  display: grid;
+  grid-template-columns: repeat(4, minmax(350px, 1fr));
+  gap: 1rem;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 8rem;
+}
+@media screen and (max-width:767px) {
+  .teamscard-grid {
+    grid-template-columns: repeat(1, minmax(250px, 1fr));
+    grid-gap: 15rem;
+}
+.business-pro-section {
+  margin-bottom: 14rem;
+}
+
+.text-animated-block{
+padding: 50px 0;
+margin-bottom: 12rem;
+margin-top: 8rem;
+}
+.text-animated-block h1{
+  font-size: 65px;
+  line-height: 100px;
+}
+.text-animated-block h2{
+  font-size: 100px;
+  margin-bottom: 2rem;
+}
+.text-animated-block h5{
+  font-size: 36px;
+  margin-bottom: 2rem;
+}
+.text-animated-block p{
+  font-size: 28px;
+}
+.midHeadDiv1{
+  padding: 1.5rem !important;
+}
+.midHead{
+  display: block !important;
+}
+.midHead h3{
+  font-size: 35px !important;
+  line-height: 45px !important;
+  margin-bottom: 2rem;
+}
+.midHead h6{
+  font-size: 25px !important;
+  margin-bottom: 2rem;
+}
+.endHead{
+  flex-direction: column;
+}
+.endHead1{
+  margin-right: 0px !important;
+  text-align: center;
+}
+.endHead1 h2{
+ font-size: 50px !important;
+
+}
+.card_content{
+  margin: 2rem;
+}
+.overlay{
+  width: 80%;
+}
+.overlay h3{
+  font-size: 50px !important;
+}
+.overlay p{
+  font-size: 20px !important;
+}
+.imageContainer{
+  grid-template-columns: repeat(1, minmax(350px, 1fr));
+}
+.explore-btn, .trial-btn {
+  padding: 1rem 1.6rem;
+  font-size: 20px;
+  width: 50%;
+  font-weight: bolder;
+  cursor: pointer;
+  border-radius: 40px;
+}
+.teamsHeading h2{
+  font-size: 47px;
+margin-bottom: 12rem;
+}
+.teamscontainer{
+  max-width: 95%;
+}
+.teamscard{
+  padding: 2rem;
+}
+.teamsicon-container{
+  width: 60px;
+  height: 60px;
+}
+.teamsicon{
+  min-width: 100vw !important;
+}
+.teamstitle{
+  font-size: 26px;
+  margin-top: 15rem;
+}
+.video1{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.section1{
+  padding: 2rem !important;
+}
+.section1 img{
+ width: 250px;
+ height: 250px;
+
+}
+.card-inner .text-wrp h2{
+  display: flex;
+  text-align: center;
+  font-size: 35px;
+  width: 100vw;
+}
+.wrap-col{
+padding: 2rem;
+}
+.col-fix-full{
+  border-radius: 70px;
+}
+.full-card.flex-align {
+  padding: 30px;
+  display: block;
+}
+.full-card.flex-align h2{
+  font-size: 30px;
+  margin-bottom: 1rem;
+}
+.flex-justify-end, .flex-justify-end a{
+  margin-bottom: 20px;
+}
+}
