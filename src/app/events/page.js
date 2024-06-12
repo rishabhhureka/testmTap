@@ -136,7 +136,7 @@ export default function Events() {
         <div className="teamsicon-container">
           <Image src={liveEvent} alt="Icon" className="teamsicon" loading="lazy" width={1300} height={1300} />
         </div>
-          <Link href="/events/eventdetails" className="linkTag">
+          <Link href="/eventdetails" className="linkTag">
           <div>
           <h3 className="teamstitle">Exciting Event Ahead!</h3>
           <p style={{marginBottom:'0.5rem',fontSize:'20px',color:'white'}}>26 May 2024</p>
@@ -149,7 +149,7 @@ export default function Events() {
         <div className="teamsicon-container">
           <Image src={liveEvent} alt="Icon" className="teamsicon" loading="lazy" />
         </div>
-        <Link href="/events/eventdetails" className="linkTag">
+        <Link href="/eventdetails" className="linkTag">
         <div>
         <h3 className="teamstitle">Exciting Event Ahead!</h3>
         <p style={{marginBottom:'0.5rem',fontSize:'20px'}}>26 May 2024</p>
@@ -161,7 +161,7 @@ export default function Events() {
         <div className="teamsicon-container">
           <Image src={liveEvent} alt="Icon" className="teamsicon" loading="lazy" />
         </div>
-        <Link href="/events/eventdetails" className="linkTag">
+        <Link href="/eventdetails" className="linkTag">
         <div>
         <h3 className="teamstitle">Exciting Event Ahead!</h3>
         <p style={{marginBottom:'0.5rem',fontSize:'20px'}}>26 May 2024</p>
@@ -173,7 +173,7 @@ export default function Events() {
         <div className="teamsicon-container">
           <Image src={liveEvent} alt="Icon" className="teamsicon" loading="lazy" />
         </div>
-        <Link href="/events/eventdetails" className="linkTag">
+        <Link href="/eventdetails" className="linkTag">
         <div>
         <h3 className="teamstitle">Exciting Event Ahead!</h3>
         <p style={{marginBottom:'0.5rem',fontSize:'20px'}}>26 May 2024</p>
