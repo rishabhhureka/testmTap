@@ -110,13 +110,13 @@ export default function HomePage() {
         };
       }, [x, y]);
   return (
-    <main >
+    <main style={{paddingTop:'90px'}}>
     <section id="slider">
             <div className="container">
                 <div className="banner-wrap">
                     <div className="left-col-banner">
                         <h2>
-                            A New<br />
+                            A New <br /> 
                             Way to<br />
                             <div className="ms-slider">
                                 <ul className="ms-slider__words">

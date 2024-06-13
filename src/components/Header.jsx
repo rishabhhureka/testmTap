@@ -78,18 +78,22 @@ const Header = () => {
             <Link href="/teams" className="nav-link">For Teams</Link>
           </li>
           <li className="dropdown" >
-      <a className="nav-link" >Solutions</a>
-      <ul className="dropdown-content">
-        <li className="menu-item">
+      <a   className="nav-link" >Solutions</a>
+      <div className="dropdown-content">
+       <div className="emptyDropdown"></div>
+        <br />
+      
+      <div className="maindropdown-content">
+        <p className="menu-item">
         <Link href="/googlereviewcards" style={{  marginTop: "2rem"}}>Google Review Cards</Link>
        
-        </li>
-     <li className="menu-item">
+        </p>
+     <p className="menu-item">
      <Link href="/gift">Gift</Link>
-     </li>
-       
-      
-      </ul>
+     </p>
+               <br />
+     </div>
+      </div>
     </li>
           <li>
             <Link href="/blog" className="nav-link">Blog</Link>
