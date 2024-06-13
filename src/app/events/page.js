@@ -4,9 +4,23 @@ import EventsPage from "../../Img/eventsBackground.jpg";
 import EventsImage from "../../Img/eventImage.jpg"
 import "./events.css";
 import Link from "next/link";
+import Head from "next/head";
 
 export default function Events() {
   return (
+    <>
+    <Head>
+    <title>mTap Event</title>
+    <meta property="og:site_name" content="mTap" />
+   <meta name="description" content="Unleash the Power of Digital Business Cards for Modern
+                Networking Websites! Join us for an unforgettable event to
+                experience the revolutionary mtap technology." />
+    <meta property="og:image" content="https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2024-04/Google-Review-Card-01.png" />
+    <meta property="og:image:url" content="https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2024-04/Google-Review-Card-01.png" />
+    <meta name="keywords" content="product, ecommerce, User engagement, SEO-friendly, Customizable colors,mTap, event" />
+  
+  
+  </Head>
     <main data-v-0a07a5aa>
       <div className="business-pro-section">
         <div className="star-background">
@@ -217,5 +231,6 @@ export default function Events() {
         </div>
       </section>
     </main>
+    </>
   );
 }

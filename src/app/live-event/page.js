@@ -14,6 +14,7 @@ import {
 } from "@mui/material";
 
 import React, { useState } from "react";
+import Head from "next/head";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -153,6 +154,19 @@ export default function EventDetails() {
 
   const paginatedImages = getPaginatedImages();
   return (
+    <>
+    <Head>
+    <title>mTap Event</title>
+    <meta property="og:site_name" content="mTap" />
+   <meta name="description" content="Unleash the Power of Digital Business Cards for Modern
+                Networking Websites! Join us for an unforgettable event to
+                experience the revolutionary mtap technology." />
+    <meta property="og:image" content="https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2024-04/Google-Review-Card-01.png" />
+    <meta property="og:image:url" content="https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2024-04/Google-Review-Card-01.png" />
+    <meta name="keywords" content="product, ecommerce, User engagement, SEO-friendly, Customizable colors,mTap, event" />
+  
+  
+  </Head>
     <main data-v-0a07a5aa>
       <div className="business-pro-section">
         <div className="star-background">
@@ -295,5 +309,6 @@ export default function EventDetails() {
       </section>
       {/* \Photo & video gallery */}
     </main>
+    </>
   );
 }

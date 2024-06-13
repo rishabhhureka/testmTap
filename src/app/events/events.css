@@ -71,8 +71,8 @@ line-height: 190px;
   }
   /* styles/Home.css */
   .teamsHeading h2{
-      color: #fff;
-      text-align: center;
+      color: #fff ;
+      text-align: center !important;
       font-size: 96px;
       font-style: normal;
       font-weight: 900;
@@ -90,7 +90,7 @@ line-height: 190px;
   text-decoration: none !important;
 }
 .linkTag h3{
-  color: #fff !important;
+  color: #fff ;
 }
 .linkTag p{
   color: white;
@@ -129,7 +129,7 @@ border-radius: 30px;
   font-weight: 600;
   margin-bottom: 1rem;
   text-align: start;
-  color: #fff;
+  color: #fff !important;
 }
 .video1{
   border-radius: 30px;
@@ -195,7 +195,7 @@ margin: 2rem;
     grid-gap: 15rem;
 }
 .business-pro-section {
-  margin-bottom: 14rem;
+  margin-bottom: 8rem;
 }
 
 .text-animated-block{
@@ -204,7 +204,7 @@ margin-bottom: 12rem;
 margin-top: 8rem;
 }
 .text-animated-block h1{
-  font-size: 65px;
+  font-size: 90px;
   line-height: 100px;
 }
 .text-animated-block h2{
@@ -217,6 +217,7 @@ margin-top: 8rem;
 }
 .text-animated-block p{
   font-size: 28px;
+  line-height: 35px;
 }
 .midHeadDiv1{
   padding: 1.5rem !important;

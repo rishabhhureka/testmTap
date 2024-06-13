@@ -129,13 +129,13 @@ padding: 2rem;
 }
   .teamsHeading h2{
     margin-top: 2rem;
-      color: #000 !important;
+      color: #000 !important ;
       text-align: center !important ;
-      font-size: 96px !important;
+      font-size: 96px ;
       font-style: normal;
       font-weight: 700 !important;
       line-height: 105%;
-      margin-bottom: 2rem !important;
+      margin-bottom: 2rem ;
       margin-right: 2rem !important;
 
   }
@@ -196,7 +196,7 @@ border-radius: 30px;
   font-weight: 600;
   margin-bottom: 1rem;
   text-align: start;
-  color: #000 !important;
+  color: #000 ;
 }
 /* public/events.css */
 
@@ -224,10 +224,7 @@ padding: 50px 0;
 margin-bottom: 12rem;
 margin-top: 8rem;
 }
-.text-animated-block h1{
-  font-size: 65px;
-  line-height: 100px;
-}
+
 .text-animated-block h2{
   font-size: 100px;
   margin-bottom: 2rem;
@@ -291,13 +288,30 @@ margin-top: 8rem;
 }
 .eventHeading h2{
   font-size: 50px !important;
-margin-bottom: 14rem !important;
+margin-bottom: 3rem !important;
+}
+.eventHeading p{
+  font-size: 20px !important;
+}
+.eventHeading span{
+  width: 10px !important ;
+  height: 10px !important ;
 }
 .imageHeading h2{
   font-size: 50px !important;
   padding: 2rem;
   margin-top: 1rem !important;
   margin-bottom: 0rem !important;
+}
+.teamsHeading h2{
+ 
+   
+    font-size: 55px ;
+   font-weight: 600 ;
+    line-height: 105%;
+    margin-bottom: 14rem ;
+  
+
 }
 .teamsHeadingh2{
   margin-bottom: 10rem !important;
@@ -501,6 +515,7 @@ margin-top: 8rem;
 .text-animated-block h1{
   font-size: 69px !important;
   line-height: 80px;
+  text-align: start;
 }
 .text-animated-block h2{
   font-size: 100px;
