@@ -12,9 +12,9 @@ import CardContent from '@mui/joy/CardContent';
 import CardOverflow from '@mui/joy/CardOverflow';
 import Typography from '@mui/joy/Typography';
 import Image from 'next/image';
-import googleReviewButton from "../../Img/GoogleReviewCard.png"
-import googleReviewButton2 from "../../Img/GoogleCustomCard.png"
-import qrCode from "../../Img/qrCode.png"
+import googleReviewButton from "../../../Img/GoogleReviewCard.png"
+import googleReviewButton2 from "../../../Img/GoogleCustomCard.png"
+import qrCode from "../../../Img/qrCode.png"
 import { Grid,FormControl,InputLabel,Select,MenuItem,TextField, IconButton} from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';

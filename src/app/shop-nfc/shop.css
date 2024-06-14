@@ -1,0 +1,82 @@
+.cardContainer{
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+
+}
+.productContainer , .allProductContainer{ margin-left: -4rem; margin-right: -4rem;}   
+.imagesContainer{
+    max-width:60%;
+}
+.productImageContainer{
+    max-width: 70%;
+    padding-top: 1rem;
+    padding-bottom: 0  ;
+}
+.bannerContainer{
+    max-width: 100%;
+}
+.bannerContainerImage{
+width: 100%;
+}
+.bannerText{
+    max-width: 50%;
+}
+.bannerText h1{
+  font-size: 90px;
+margin-bottom: 2rem;
+}
+.bannerText h3{
+    font-size: 35px;
+    font-weight: 600;
+
+  }
+  .bannerText p{
+    font-size: 25px;
+    width: 40vw;
+    /* font-weight: 600; */
+
+  }
+  .exploreButton a{
+border: 1px solid transparent;
+display: inline-block;
+background-color: #00ff3d;
+min-width: 30%;
+padding: 1rem;
+font-size: 1.9rem;
+font-weight: 700;
+
+text-align: center;
+border-radius: 5px;
+  }
+  @media screen and (max-width:767px){
+    .productContainer, .allProductContainer{
+        margin-left:0;
+        margin-right:0;
+    }
+    .bannerText h1{
+        font-size: 60px;
+        width: 100%;
+        line-height: 60px;
+    }
+    .bannerText{
+        max-width: 100%;
+    }
+    .bannerText p{
+        width: 90%;
+    }
+    .exploreButton{
+        justify-content: start;
+
+    }
+    .exploreButton a{ 
+       font-size: 1.5rem;
+
+    }
+    .imageBanner{
+        min-height: 25rem;
+    }
+    .imageBanner img{
+        width: 28rem;
+       
+    }
+  }
