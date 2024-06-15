@@ -1,10 +1,9 @@
 import React from 'react'
-import GoogleReviewCard from '../../components/GoogleReviewCard'
 
-const Solutions = () => {
+const page = () => {
   return (
-    <div><GoogleReviewCard/></div>
+    <div>Solutions page</div>
   )
 }
 
-export default Solutions
+export default page
