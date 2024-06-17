@@ -1,5 +1,7 @@
 
-
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -2734,6 +2736,11 @@ font-size: 65px !important;
     .AddToCartButton{
       width: 100%;
     }
+    .AddToCartButton button{
+        width: 100%;
+        padding: 1rem;
+        margin-bottom: 1rem;
+      }
     .DescriptionP{
       font-size: 20px;
       width: 85%;

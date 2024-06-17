@@ -64,8 +64,41 @@ const Header = () => {
               onClick={toggleMenu}
             />
           </button>
-          <li>
-            <Link href="/product" aria-current="page" className="nav-link">Shop NFC</Link>
+          <li  className="dropdown">
+            <Link href="/shop-nfc" aria-current="page" className="nav-link">Shop NFC</Link>
+            <div className="dropdown-content">
+       <div className="emptyDropdown"></div>
+     
+      
+      <div className="maindropdown-content">
+      <p className="menu-item">
+     <Link href="/shop-nfc/custom-digital-business-cards">mTap Custom Cards</Link>
+     </p>
+        <p className="menu-item">
+        <Link href="/shop-nfc/mtap-review-cards">Google Review Cards</Link>
+       
+        </p>
+     <p className="menu-item">
+     <Link href="/shop-nfc/metal-cards">NFC Black Metal Card</Link>
+     </p>
+     <p className="menu-item">
+     <Link href="/shop-nfc/mtap-key-fobs">mTap Key Fobs</Link>
+     </p>
+     <p className="menu-item">
+     <Link href="/shop-nfc/mtap-retail-solutions">mTap Retail Solutions</Link>
+     </p>
+     <p className="menu-item">
+     <Link href="/shop-nfc/mtap-business-cards">mTap Business Cards</Link>
+     </p>
+     <p className="menu-item">
+     <Link href="/shop-nfc/mtap-collections">mTap Collections</Link>
+     </p>
+     <p className="menu-item">
+     <Link href="/shop-nfc/mtap-stickers">mTap Stickers</Link>
+     </p>
+               
+     </div>
+      </div>
           </li>
        
           <li>
