@@ -1,5 +1,5 @@
 .cardContainer{
-    margin-top: 10rem;
+    margin-top: 12rem;
     margin-bottom: 10rem;
 
 }
@@ -48,11 +48,13 @@ font-weight: 700;
 text-align: center;
 border-radius: 5px;
   }
+  
   @media screen and (max-width:767px){
-    .productContainer, .allProductContainer{
+    .productContainer, .allProductContainer {
         margin-left:0;
         margin-right:0;
     }
+
     .bannerText h1{
         font-size: 60px;
         width: 100%;
@@ -67,6 +69,9 @@ border-radius: 5px;
     .exploreButton{
         justify-content: start;
 
+    }
+    .businessCardHeading{
+        padding: 0rem !important;
     }
     .exploreButton a{ 
        font-size: 1.5rem;

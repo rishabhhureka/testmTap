@@ -10,82 +10,82 @@ const allProducts = [
   {
     id: 1,
     name: "mTap Custom Digital Business Cards",
-    href: "#",
+    href: "/shop-nfc/custom-digital-business-cards",
     imageSrc:
       "https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/styles/max_325x325/public/2023-02/card300.png?itok=ommdsCfk",
-    imageAlt: "Front of men's Basic Tee in black.",
+    imageAlt: "Cards",
   },
   {
     id: 2,
     name: "Metal Cards",
-    href: "#",
+    href: "/shop-nfc/metal-cards",
     imageSrc:
       "https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/styles/max_325x325/public/2024-04/Metal-Card-Landing-Page-Image.png?itok=ghG4ckL_",
-    imageAlt: "Front of men's Basic Tee in black.",
+    imageAlt: "Cards",
   },
   {
     id: 3,
     name: "Google Review Cards",
-    href: "#",
+    href: "/shop-nfc/mtap-review-cards",
     imageSrc:
       "https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/styles/max_325x325/public/2024-04/Google-Review-Card-01_0.png?itok=cCUfzVeG",
-    imageAlt: "Front of men's Basic Tee in black.",
+    imageAlt: "Cards",
   },
   {
     id: 4,
     name: "mTap Retail Solutions",
-    href: "#",
+    href: "/shop-nfc/mtap-retail-solutions",
     imageSrc:
       "https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/styles/max_325x325/public/2024-04/mTap-Table-Stand.png?itok=lOGFZzc2",
-    imageAlt: "Front of men's Basic Tee in black.",
+    imageAlt: "Cards",
   },
   {
     id: 5,
     name: "mTap Key Fobs",
-    href: "#",
+    href: "/shop-nfc/mtap-key-fobs",
     imageSrc:
       "https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/styles/max_325x325/public/2021-12/Keyfobs%20Blue.png?itok=1xYOx5VH",
-    imageAlt: "Front of men's Basic Tee in black.",
+    imageAlt: "Cards",
   },
   {
     id: 6,
     name: "mTap Business Cards",
-    href: "#",
+    href: "/shop-nfc/mtap-business-cards",
     imageSrc:
       "https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/styles/max_325x325/public/2021-12/NFC-Enabled-Plastic-Business-Card_1.jpg?itok=bVDbKdPv",
-    imageAlt: "Front of men's Basic Tee in black.",
+    imageAlt: "Cards",
   },
   {
     id: 7,
     name: "Wooden Cards",
-    href: "#",
+    href: "/shop-nfc/wooden-cards",
     imageSrc:
       "https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/styles/max_325x325/public/2024-06/mtap%20wood%20digital%20business%20card.png?itok=069QyXBA",
-    imageAlt: "Front of men's Basic Tee in black.",
+    imageAlt: "Cards",
   },
   {
     id: 8,
     name: "Wrist Bands",
-    href: "#",
+    href: "/shop-nfc/wrist-bands",
     imageSrc:
       "https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/styles/max_325x325/public/2024-06/mtap-wrist-bands.png?itok=Iz4LEP-9",
-    imageAlt: "Front of men's Basic Tee in black.",
+    imageAlt: "Cards",
   },
   {
     id: 9,
     name: "mTap Stickers",
-    href: "#",
+    href: "/shop-nfc/mtap-stickers",
     imageSrc:
       "https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/styles/max_325x325/public/2021-12/mTap%20Circle%20Flat%20Small.png?itok=qu1UT8W1",
-    imageAlt: "Front of men's Basic Tee in black.",
+    imageAlt: "Cards",
   },
   {
     id: 10,
     name: "mTap Collections",
-    href: "#",
+    href: "/shop-nfc/mtap-collections",
     imageSrc:
       "https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/styles/max_325x325/public/2021-12/mTap%20Collections.jpg?itok=-mQYfHhz",
-    imageAlt: "Front of men's Basic Tee in black.",
+    imageAlt: "Cards",
   },
   // More products...
 ];
@@ -93,18 +93,18 @@ const products = [
   {
     id: 1,
     name: "NFC Black Metal Cards",
-    href: "#",
+    href: "/shop-nfc/metal-cards",
     imageSrc:
       "https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/styles/max_325x325/public/2024-04/Metal-Card-Landing-Page-Image.png?itok=ghG4ckL_",
-    imageAlt: "Front of men's Basic Tee in black.",
+    imageAlt: "Cards",
   },
   {
     id: 3,
     name: "Google Review Cards",
-    href: "#",
+    href: "/shop-nfc/mtap-review-cards",
     imageSrc:
       "https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/styles/max_325x325/public/2024-04/Google-Review-Card-01_0.png?itok=cCUfzVeG",
-    imageAlt: "Front of men's Basic Tee in black.",
+    imageAlt: "Cards",
   },
   {
     id: 4,
@@ -112,7 +112,7 @@ const products = [
     href: "#",
     imageSrc:
       "https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/styles/max_325x325/public/2024-04/mTap-Table-Stand.png?itok=lOGFZzc2",
-    imageAlt: "Front of men's Basic Tee in black.",
+    imageAlt: "Cards",
   },
   {
     id: 2,
@@ -120,7 +120,7 @@ const products = [
     href: "#",
     imageSrc:
       "https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/styles/max_325x325/public/2024-04/Metal-Card-Landing-Page-Image.png?itok=ghG4ckL_",
-    imageAlt: "Front of men's Basic Tee in black.",
+    imageAlt: "Cards",
   },
   {
     id: 5,
@@ -128,7 +128,7 @@ const products = [
     href: "#",
     imageSrc:
       "https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/styles/max_325x325/public/2021-12/Keyfobs%20Blue.png?itok=1xYOx5VH",
-    imageAlt: "Front of men's Basic Tee in black.",
+    imageAlt: "Cards",
   },
 ];
 export default function Shop_NFC() {

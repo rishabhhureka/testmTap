@@ -74,7 +74,7 @@ const Header = () => {
      <Link href="/shop-nfc/custom-digital-business-cards">mTap Custom Cards</Link>
      </p>
         <p className="menu-item">
-        <Link href="/shop-nfc/google-review-cards">Google Review Cards</Link>
+        <Link href="/shop-nfc/mtap-review-cards">Google Review Cards</Link>
        
         </p>
      <p className="menu-item">

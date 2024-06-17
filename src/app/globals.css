@@ -2737,6 +2737,11 @@ font-size: 65px !important;
     .AddToCartButton{
       width: 100%;
     }
+    .AddToCartButton button{
+        width: 100%;
+        padding: 1rem;
+        margin-bottom: 1rem;
+      }
     .DescriptionP{
       font-size: 20px;
       width: 85%;
