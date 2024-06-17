@@ -18,7 +18,7 @@ export default function GoogleReviewCards() {
          */}
           <section className="section section1" >
             <div className="leftSide" >
-              <div className="video"><video className="elementor-video" src="https://lp.mtap.io/wp-content/uploads/2023/06/4902015513813984544mobile_2_1.mov"  autoplay="" muted="muted" playsinline="" controlslist="nodownload" loop></video></div>
+              <div className="video"><video className="elementor-video" src="https://lp.mtap.io/wp-content/uploads/2023/06/4902015513813984544mobile_2_1.mov"  autoPlay="" muted="muted" playsInline="" controlsList="nodownload" loop></video></div>
               <div className="card">
                 <Image className='cardImg card1' src={card1} alt="cards" />
                 <Image className='cardImg card2' src={card1} alt="cards" />

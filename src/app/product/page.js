@@ -23,9 +23,9 @@ import RemoveIcon from '@mui/icons-material/Remove';
 import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Image from 'next/image';
-import googleReviewButton from "../../../Img/GoogleReviewCard.png";
-import googleReviewButton2 from "../../../Img/GoogleCustomCard.png";
-import qrCode from "../../../Img/qrCode.png";
+import googleReviewButton from "../../Img/GoogleReviewCard.png"
+import googleReviewButton2 from "../../Img/GoogleCustomCard.png";
+import qrCode from "../../Img/qrCode.png";
 import Head from 'next/head';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
@@ -342,11 +342,13 @@ const GoogleReviewCard = () => {
                 sx={{
                   '--variant-borderWidth': '2px',
                   borderRadius: 10,
-                  width: '25vw',
+                  width: '30vw',
                   padding: '1rem',
                   mx: 'auto',
                   backgroundColor: "#00B4D8",
                       color:'white',
+                      fontSize:'20px',
+                      fontWeight:'700',
                 '&:hover': {
     backgroundColor: '#185ea5',
     color:'white',
