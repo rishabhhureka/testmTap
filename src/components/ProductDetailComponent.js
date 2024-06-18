@@ -4,7 +4,7 @@ const ProductDetailComponent = ({ product }) => {
   return (
     <div>
       <h1>{product.name}</h1>
-      <p>Price: {product.price}</p>
+      <p>Price Of The Product: {product.price}</p>
       <Image
         src={product.imageSrc}
         alt={product.name}
