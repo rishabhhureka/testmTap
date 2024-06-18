@@ -130,7 +130,7 @@ export default function Teams() {
                 Seamless Lead Management Across Your Organization
               </h5>
               <p>
-                Collect better data on your team's in-person business
+                Collect better data on your team&apos;s in-person business
                 development, sync your tools, and empower employees to network
                 effortlessly
               </p>

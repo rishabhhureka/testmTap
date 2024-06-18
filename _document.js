@@ -1,9 +1,7 @@
 // pages/_document.js
 
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-import { Inter } from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin'] });
 
 export default class MyDocument extends Document {
   render() {
@@ -18,7 +16,7 @@ export default class MyDocument extends Document {
           </noscript>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
         </Head>
-        <body className={inter.className}>
+        <body >
           <Main />
           <NextScript />
         </body>

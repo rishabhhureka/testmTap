@@ -1,4 +1,6 @@
+import Image from 'next/image';
 import React from 'react'
+
 const AccordionItem = ({ question, answer, isOpen, onClick }) => (
     <div className={isOpen ? 'open accordion-group' : 'close accordion-group'}>
       <h4 onClick={onClick}>
