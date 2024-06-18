@@ -98,8 +98,8 @@ export default function Events() {
       <div className="overlay">
         <h3>Join the Revolution</h3>
         <p>Embrace the digital transformation and elevate your networking game with mTap!</p>
-        <p>Don't miss out on the opportunity to be part of the networking revolution. Join us now!</p>
-        <p>Experience networking like never before and leave a lasting impression with mTap's innovative technology!</p>
+        <p>Do not miss out on the opportunity to be part of the networking revolution. Join us now!</p>
+        <p>Experience networking like never before and leave a lasting impression with mTap&apos;s innovative technology!</p>
       </div>
     </div>
 {/* carousel Images                  */}

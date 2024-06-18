@@ -431,7 +431,7 @@ export default function HomePage() {
                         </i>
                         <h2>Our Commitment to Information Security</h2>
                         <p>
-                            We prioritize your data's privacy and security. Employing a security-first approach,
+                            We prioritize your data&apos;s privacy and security. Employing a security-first approach,
                             partnering with reputable vendors, conducting regular infrastructure tests, and respecting
                             your data ownership, we never share or sell your information without your consent.
                         </p>
